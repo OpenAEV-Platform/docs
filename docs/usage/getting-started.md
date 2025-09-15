@@ -24,6 +24,21 @@ Here are some examples of use cases:
 The welcome page provides every OpenBAS platform visitor with a snapshot of the platform activity as well as an overview
 of your global security posture. You can find more information in [this section](evaluate/overview.md).
 
+## Starter Pack
+Enabled by default, and in order to understand the value of OpenAEV, the Starter Pack will create and provide for you a set of items for a ready to use platform.
+
+Will be created :
+
+- Three scenarios (Tabletop, Technical Agentless, Technical Agent based)
+- Four dashboards (Technical Home and Scenario, Technical Simulation, TTX Home and Scenario, TTX Simulation)
+- Ready to use Payloads (Filigran)
+- Ready to use Injects (NMAP and Nuclei)
+- All Filigran Collectors (Mitre Attack, Atomic Red Team, OpenAEV, CVE by NVD Nist)
+- One Endpoint agentless
+- One Asset Group "All endpoint"
+
+You can find configuration to disable it in [this section](../deployment/configuration.md).
+
 ## Your first Breach and Attack Simulation
 
 ### Creating or Importing players and assets to play with
