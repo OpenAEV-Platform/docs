@@ -29,13 +29,23 @@ Enabled by default, and in order to understand the value of OpenAEV, the Starter
 
 Will be created :
 
-- Three scenarios (Tabletop, Technical Agentless, Technical Agent based)
-- Four dashboards (Technical Home and Scenario, Technical Simulation, TTX Home and Scenario, TTX Simulation)
-- Ready to use Payloads (Filigran)
-- Ready to use Injects (NMAP and Nuclei)
-- All Filigran Collectors (Mitre Attack, Atomic Red Team, OpenAEV, CVE by NVD Nist)
-- One Endpoint agentless
-- One Asset Group "All endpoint"
+- Three [scenarios](scenarios_and_simulations.md) ([Tabletop](https://filigran.io/build-your-table-top-scenario-with-openbas/), Technical Agentless, [Technical Agent based](https://filigran.io/deploy-openbas-agents-and-validate-your-security-posture/))
+    - Set of tests and attacks 
+- Four [dashboards](dashboards/custom-dashboards/custom-dashboards.md) (Technical Home and Scenario, Technical Simulation, TTX Home and Scenario, TTX Simulation)
+    - Produces a summary of the different scenarios and simulations played on the platform
+- Ready to use [Payloads](payloads/payloads.md) (Filigran)
+    - Attack templates validated by Filigran
+- Ready to use [Injectors](injectors.md) ([NMAP](https://github.com/OpenAEV-Platform/injectors/tree/main/nmap) and [Nuclei](https://github.com/OpenAEV-Platform/injectors/tree/main/nuclei))
+    - Will provide the possibility to create agentless attacks
+- All Filigran [Collectors](collectors.md)
+    - Atomic Red Team : Will provide to you a set of payloads ([more info](https://www.atomicredteam.io/atomic-red-team))
+    - Mitre Attack : Will provide attack pattern and kill chain ([more info](https://docs.openbas.io/latest/administration/taxonomies/)) 
+    - OpenAEV : Will provide attack templates validated by Filigran ([more info](https://github.com/OpenAEV-Platform/payloads))
+    - CVE by NVD Nist : Provide all known CVE ([more info](https://docs.openbas.io/latest/administration/taxonomies/))
+- One [Agentless Endpoint](assets.md) 
+    - Prepared agentless endpoint to be used by previous items 
+- One [Asset Group](assets.md) "All endpoint"
+    - Prepared assets group to get all endpoints
 
 You can find configuration to disable it in [this section](../deployment/configuration.md).
 
