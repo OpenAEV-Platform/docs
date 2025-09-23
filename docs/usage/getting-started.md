@@ -29,12 +29,14 @@ Enabled by default, and in order to understand the value of OpenAEV, the Starter
 
 Will be created :
 
-- Three [scenarios](scenarios_and_simulations.md) ([Tabletop](https://filigran.io/build-your-table-top-scenario-with-openbas/), Technical Agentless, [Technical Agent based](https://filigran.io/deploy-openbas-agents-and-validate-your-security-posture/))
-    - Set of tests and attacks 
+- Three types of [scenarios](scenarios_and_simulations.md) available :
+    - [Tabletop](https://filigran.io/build-your-table-top-scenario-with-openbas/)
+    - Technical - Agentless
+    - [Technical - Agent-based](https://filigran.io/deploy-openbas-agents-and-validate-your-security-posture/)
 - Four [dashboards](dashboards/custom-dashboards/custom-dashboards.md) (Technical Home and Scenario, Technical Simulation, TTX Home and Scenario, TTX Simulation)
     - Produces a summary of the different scenarios and simulations played on the platform
 - Ready to use [Payloads](payloads/payloads.md) (Filigran)
-    - Attack templates validated by Filigran
+    - Payloads validated by Filigran
 - Ready to use [Injectors](injectors.md) ([NMAP](https://github.com/OpenAEV-Platform/injectors/tree/main/nmap) and [Nuclei](https://github.com/OpenAEV-Platform/injectors/tree/main/nuclei))
     - Will provide the possibility to create agentless attacks
 - All Filigran [Collectors](collectors.md)
