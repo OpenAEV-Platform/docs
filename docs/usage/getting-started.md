@@ -35,14 +35,12 @@ Will be created :
     - [Technical - Agent-based](https://filigran.io/deploy-openbas-agents-and-validate-your-security-posture/)
 - Four [dashboards](dashboards/custom-dashboards/custom-dashboards.md) (Technical Home and Scenario, Technical Simulation, TTX Home and Scenario, TTX Simulation)
     - Produces a summary of the different scenarios and simulations played on the platform
-- Ready to use [Payloads](payloads/payloads.md) (Filigran)
-    - Payloads validated by Filigran
 - Ready to use [Injectors](injectors.md) ([NMAP](https://github.com/OpenAEV-Platform/injectors/tree/main/nmap) and [Nuclei](https://github.com/OpenAEV-Platform/injectors/tree/main/nuclei))
     - Will provide the possibility to create agentless attacks
 - All Filigran [Collectors](collectors.md)
     - Atomic Red Team : Will provide to you a set of payloads ([more info](https://www.atomicredteam.io/atomic-red-team))
-    - Mitre Attack : Will provide attack pattern and kill chain ([more info](https://docs.openbas.io/latest/administration/taxonomies/)) 
-    - OpenAEV : Will provide attack templates validated by Filigran ([more info](https://github.com/OpenAEV-Platform/payloads))
+    - Mitre Attack : Will provide payloads and kill chain ([more info](https://docs.openbas.io/latest/administration/taxonomies/)) 
+    - OpenAEV : Will provide payloads validated by Filigran ([more info](https://github.com/OpenAEV-Platform/payloads))
     - CVE by NVD Nist : Provide all known CVE ([more info](https://docs.openbas.io/latest/administration/taxonomies/))
 - One [Agentless Endpoint](assets.md) 
     - Prepared agentless endpoint to be used by previous items 
