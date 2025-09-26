@@ -32,6 +32,14 @@ To import scenarios:
 
 The library contains various scenarios covering different attack vectors, threat actors, and industry-specific use cases.
 
+#### One-click scenarios deployment
+From the XTM Hub, you can effortlessly deploy your desired scenario with just a single click.
+To get started, simply enroll your OpenAEV platform following the instructions in our [OpenAEV registration documentation](/administration/hub/).
+Next, navigate to your preferred scenario and click the ```Deploy in OpenAEV``` button located in the top right corner.
+If you have multiple OpenAEV platforms registered, choose the platform where you wish to deploy the dashboard.
+You will then be redirected to the OpenAEV platform, where the process will proceed automatically.
+Within a few seconds, you'll be directed to your scenarios list, with the newly created scenario in it (please think about adjusting your filters if needed!).
+
 
 ## Scenario overview
 
