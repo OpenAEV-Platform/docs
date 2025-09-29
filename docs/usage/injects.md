@@ -168,8 +168,6 @@ monitoring systems detect it.
 **Main uses:**
 
 - Simulate network scans (open ports, service fingerprinting).
-- Trigger alerts in EDR, SIEM or IDS/IPS.
-- Evaluate how reconnaissance activity is logged and correlated.
 
 ### Nuclei
 
@@ -181,8 +179,6 @@ It simulates targeted vulnerability discovery and misconfiguration checks to val
 **Main uses:**
 
 - Simulate vulnerability scanning for web, infrastructure, or cloud assets.
-- Test SOC / Blue Team detection of vulnerability scanning activity.
-- Create expectations to verify whether a specific vulnerability or scan pattern was detected.
 
 ## Inject tests
 
