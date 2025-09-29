@@ -115,6 +115,9 @@ Each expectation has a **default score value** at creation, configurable via env
 
 Expectations must be validated within a time limit. Defaults are set in the system but can be overridden:
 
+- Manual Response: By default if not manual expectations are set the expiration will done after 24 hours
+- Detection/Prevention: By default if no expectations are set the expiration will done after 6 hour
+
 | Parameter                                      | Environment variable                           | Default value | Description                                                         |
 |:-----------------------------------------------|:-----------------------------------------------|:--------------|:--------------------------------------------------------------------|
 | openbas.expectation.technical.expiration-time  | OPENBAS_EXPECTATION_TECHNICAL_EXPIRATION-TIME  | 21600         | Expiration time for Technical expectation (detection & prevention)  |
