@@ -157,6 +157,33 @@ security posture in response to various technical actions attackers may take.
 
 There are over 1,700 such injects covering all the TTPs in the MITRE ATT&CK matrix.
 
+### Nmap
+
+[GitHub Readme](https://github.com/OpenAEV-Platform/injectors/tree/main/nmap)
+
+The `Nmap Injector` allows executing **Nmap** commands against selected targets (agents or endpoints).  
+This simulates reconnaissance activity commonly performed by attackers and validates whether security controls and
+monitoring systems detect it.
+
+**Main uses:**
+
+- Simulate network scans (open ports, service fingerprinting).
+- Trigger alerts in EDR, SIEM or IDS/IPS.
+- Evaluate how reconnaissance activity is logged and correlated.
+
+### Nuclei
+
+[GitHub Readme](https://github.com/OpenAEV-Platform/injectors/tree/main/nuclei)
+
+The `Nuclei Injector` allows running **Nuclei** templates (https://nuclei.projectdiscovery.io) against selected targets (agents or endpoints).  
+It simulates targeted vulnerability discovery and misconfiguration checks to validate detection and response workflows.
+
+**Main uses:**
+
+- Simulate vulnerability scanning for web, infrastructure, or cloud assets.
+- Test SOC / Blue Team detection of vulnerability scanning activity.
+- Create expectations to verify whether a specific vulnerability or scan pattern was detected.
+
 ## Inject tests
 
 You can test direct contact injects in simulations and scenarios.
@@ -229,8 +256,10 @@ the top of the list. After clicking on it, the user confirms the tests launch an
 
 #### Navigating between active inject targets
 
-All targets that are selected for the inject are available on the Targets panel on the left side of the screen. There is a
-tab for each target type (Asset group, Endpoint, Agent, Team and Player), and only the tabs that have at least one active
+All targets that are selected for the inject are available on the Targets panel on the left side of the screen. There is
+a
+tab for each target type (Asset group, Endpoint, Agent, Team and Player), and only the tabs that have at least one
+active
 target are visible on the screen.
 
 Since there may be a large number of targets of the same type (depending on your selection), a pagination utility
@@ -241,7 +270,8 @@ with various filters is provided to help skim through the list.
 When you create a technical Inject, you assign it to endpoints, each of which may have one or multiple agents. As the
 inject executes, agents communicate their progress to the OBAS Server, which logs detailed execution traces.
 
-In the "Execution details" tab, you can see the traces related to the overall execution of the inject. On the "Execution" tab 
+In the "Execution details" tab, you can see the traces related to the overall execution of the inject. On the "
+Execution" tab
 found in the inject’s overview page, you’ll find the traces for each individual target, including both
 endpoints and agents. This helps you easily track the progress of the execution at both the agent and endpoint levels.
 Each agent produces several traces, which represent different steps of the execution process such as:
@@ -295,11 +325,13 @@ Once an inject have been executed, it is possible to access the alerts' details 
 
 By selecting an agent on the `Targets` panel, you can access the traces details that were retrieved by OpenBAS.
 
-On the above example, we can see that there are 2 agents on the `vm3.obas.lan` asset. We can see there are detections on the
+On the above example, we can see that there are 2 agents on the `vm3.obas.lan` asset. We can see there are detections on
+the
 OpenBAS agent, while the Crowdstrike agent hasn't had any yet (it can take several minutes for the traces to
 show up in OpenBAS).
 
-By clicking on the OpenBAS agent, we can see that the inject's payload was already detected by the CrowdStrike Falcon EDR
+By clicking on the OpenBAS agent, we can see that the inject's payload was already detected by the CrowdStrike Falcon
+EDR
 while more detections might arrive at a later point.
 We can also see that there was one alert identified on CrowdStrike Falcon EDR.
 
