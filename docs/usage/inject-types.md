@@ -128,7 +128,7 @@ If type of targets is Manual:
 
 - Hostnames or IP addresses are provided directly as comma-separated values.
 
-#### Resources
+### Resources
 
 - Official Nmap Documentation: https://nmap.org/docs.html
 - Options Explanation:
