@@ -172,7 +172,6 @@ integrations with APIs such as O365 and Google Apps.
 | spring.mail.username | SPRING_MAIL_USERNAME | username@mail.com | SMTP Server username |
 | spring.mail.password | SPRING_MAIL_PASSWORD | password          | SMTP Server password |
 
-
 | Parameter                                        | Environment variable                             | Default value | Description                   |
 |:-------------------------------------------------|:-------------------------------------------------|:--------------|:------------------------------|
 | spring.mail.properties.mail.smtp.ssl.enable      | SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE      | `true`        | Turn on SMTP SSL mode         |
