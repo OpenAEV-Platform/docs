@@ -165,12 +165,12 @@ integrations with APIs such as O365 and Google Apps.
 
 ##### SMTP
 
-| Parameter            | Environment variable  | Default value     | Description          |
-|:---------------------|:----------------------|:------------------|:---------------------|
-| spring.mail.host     | SPRING_MAIL_HOST      | smtp.mail.com     | SMTP Server hostname |
-| spring.mail.port     | SPRING_MAIL_PORT      | 465               | SMTP Server port     |
-| spring.mail.username | SPRING_MAIL_USERNAME  | username@mail.com | SMTP Server username |
-| spring.mail.password | SPRING_MAIL_PASSWORD  | password          | SMTP Server password |
+| Parameter            | Environment variable | Default value     | Description          |
+|:---------------------|:---------------------|:------------------|:---------------------|
+| spring.mail.host     | SPRING_MAIL_HOST     | smtp.mail.com     | SMTP Server hostname |
+| spring.mail.port     | SPRING_MAIL_PORT     | 465               | SMTP Server port     |
+| spring.mail.username | SPRING_MAIL_USERNAME | username@mail.com | SMTP Server username |
+| spring.mail.password | SPRING_MAIL_PASSWORD | password          | SMTP Server password |
 
 
 | Parameter                                        | Environment variable                             | Default value | Description                   |
