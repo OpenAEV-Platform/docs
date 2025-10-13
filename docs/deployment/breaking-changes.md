@@ -19,7 +19,7 @@ This table regroups all the breaking changes introduced, with the corresponding 
 <a id="openaev-renaming"></a>
 #### OpenAEV renaming
 
-Since OpenBAS (Open Breach & Attack Simulation) evolve, it became OpenAEV (Open Adversarial Exposure Validation).
+Since OpenBAS (Open Breach & Attack Simulation) evolves, it became OpenAEV (Open Adversarial Exposure Validation).
 
 This new platform allows you to entirely create custom attack scenarios to emulate on endpoints. You can even create your own automated tabletop crisis simulation.
 
