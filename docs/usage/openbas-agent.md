@@ -30,6 +30,7 @@ Depending on the OS, several installations are at your disposal, you can find th
 
 - Requirements:
   - Ensure access to the OpenBAS instance being used;
+  - Curl
   - Ensure that the system environment variable "Path" contains the values "%SYSTEMROOT%\System32\" and "%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\";
   - For "Advanced installation as User (service)", you need to enable the "Service Logon" policy for the user you want to run the service as, follow [this tutorial](https://learn.microsoft.com/en-us/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025) to do it;
 - Compatibility → All major Windows versions
