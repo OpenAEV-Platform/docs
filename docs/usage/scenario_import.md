@@ -63,9 +63,9 @@ If you click on the test button, you'll then be asked to choose a file. Once tha
 
 Once your mapper has been created, navigate to your [scenario](scenario.md) and then to the [injects](injects.md) tab. There, you will be able to click on an import button on the top right.
 A modal will be opening, inviting you to select an .xls/.xlsx file. Once it has been selected, you can click on next. You will then be asked to choose the sheet to import out of the spreadsheet and to select the mapper to use. You will also be able to select the timezone to use for the import. Once everything is set, click on the launch import button and your injects will be imported into the current scenario !
-Please do not that if all the dates in the xls file are absolute time of the day (e.g. 9:30, 12:45, ...), it is required for the scenario to have a launch date set.
+Please do note that if all the dates in the xls file are absolute time of the day (e.g. 9:30, 12:45, ...), it is required for the scenario to have a launch date set.
 
-## Exemple 
+## Example 
 #### 1. Mapper
     
 ![Testing an xls mapper](assets/update_the_xls_mapper.png)
@@ -109,7 +109,7 @@ Because, for this example, the mapper is configured with the following “Matchi
 - .\*(sms|SMS).\*
 - .\*mail.\*
 
-The scenario as been scheduled before import of the file and the **trigger time**, into the mapper, has been configured. 
+The scenario has been scheduled before import of the file and the **trigger time**, into the mapper, has been configured. 
 
 ![mapper_xls_inject_import_result](assets/mapper_xls_inject_import_result.png)
 ![mapper_inject_import_xls_interactive_view.png](assets/mapper_inject_import_xls_interactive_view.png)
