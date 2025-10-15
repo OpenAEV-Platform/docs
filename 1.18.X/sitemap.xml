@@ -2,266 +2,266 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.openbas.io/latest/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/administration/enterprise/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/administration/introduction/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/administration/parameters/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/administration/policies/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/administration/taxonomies/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/administration/users/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/authentication/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/clustering/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/configuration/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/installation/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/managers/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/resources/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/troubleshooting/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/upgrade/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/ecosystem/collectors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/ecosystem/executors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/ecosystem/injectors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/deployment/platform/overview/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/api-usage/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/build_from_source/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/collectors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/environment_ubuntu/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/environment_windows/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/injectors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/platform/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/development/translations/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/reference/apis/filters/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/reference/deployment/telemetry/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/assets/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/atomic/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/collectors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/default_asset_rules/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/expectations/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/findings/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/getting-started/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/inject-caldera/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/injectors/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/injects/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/injects_and_expectations/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/injects_builtin/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/notifications/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/openbas-agent/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/people/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/playing/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/rest-api/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/scenario/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/scenario_import/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/scenarios_and_simulations/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/simulation/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/simulation_reports/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/systems/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/targets/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/testing/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/challenges/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/channels/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/documents/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/lessons/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/media_pressure/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/components/variables/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/dashboards/custom-dashboards/custom-dashboards/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/dashboards/widgets/widgets/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/evaluate/overview/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/payloads/payloads/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://docs.openbas.io/latest/usage/scenario/opencti_scenario/</loc>
-         <lastmod>2025-08-30</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
 </urlset>
