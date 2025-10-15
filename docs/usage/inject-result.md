@@ -2,7 +2,7 @@
 
 ### Overview
 
-The first screen displayed when you click on a specific inject exectuded (Atomic testing or Simulation)  is a breakdown of your security
+The first screen displayed when you click on a specific inject executed (Atomic testing or Simulation)  is a breakdown of your security
 posture against this test.
 
 Results are broken down into:

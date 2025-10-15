@@ -1,6 +1,6 @@
 ## Executed Injects: Search and Filters
 
-You can search the list using the name or one the filters. Here are the available filters for this list.
+You can search the list using the name or using one of the filters. Here are the available filters for this list.
 
 ![Atomic testing filters list](assets/atomic_list_filter_attributes.png)
 
