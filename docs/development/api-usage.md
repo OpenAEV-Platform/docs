@@ -1,5 +1,4 @@
 # REST API
 
-!!! tip "Under construction"
-
-    We are doing our best to complete this page. If you want to participate, don't hesitate to join the [Filigran Community on Slack](https://community.filigran.io) or submit your pull request on the [Github doc repository](https://github.com/OpenBAS-Platform/docs).
+OpenBAS exposes a comprehensive REST API for interacting with its entities.
+Please check out the OpenAPI specifications for in-depth details: [OpenBAS REST API Reference](../api-reference)
