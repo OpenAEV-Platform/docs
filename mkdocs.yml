@@ -123,8 +123,6 @@ nav:
       - Collectors: deployment/ecosystem/collectors.md
     - Advanced:
       - Platform managers: deployment/managers.md
-      - Clustering: deployment/clustering.md
-      - Troubleshooting: deployment/troubleshooting.md
     - Breaking changes:
       - Index: deployment/breaking-changes.md
       - Migration guides:
