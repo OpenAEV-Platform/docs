@@ -3520,6 +3520,10 @@ During the reinstallation of the new OpenAEV agent, a new agent is created on Op
 <ul>
 <li>If you currently use the default bucket name "openbas", it will be updated to "openaev". You will need to either migrate your existing bucket or set the MINIO_BUCKET environment variable to specify the correct bucket for OpenAEV to use.</li>
 </ul>
+<p><strong>RabbitMQ queue renaming</strong></p>
+<ul>
+<li>The prefix name will change from "openbas" to "openaev". If you have ongoing simulations, you might be impacted and should wait for them to finish before upgrading to 2.0.X.</li>
+</ul>
 <p><strong>Elastic/OpenSearch default index renaming</strong></p>
 <ul>
 <li>The default index prefix will change from "openbas" to "openaev". Please remove old "openbas" indexes after migration to free up space in your Elasticsearch/OpenSearch cluster.</li>
@@ -3554,7 +3558,7 @@ During the reinstallation of the new OpenAEV agent, a new agent is created on Op
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 28, 2025 09:13:56"><span class="timeago" datetime="2025-10-28T09:13:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 28, 2025 09:13:56">2025-10-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 29, 2025 09:33:48"><span class="timeago" datetime="2025-10-29T09:33:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 29, 2025 09:33:48">2025-10-29</span>
   </span>
 
     
@@ -3582,14 +3586,19 @@ During the reinstallation of the new OpenAEV agent, a new agent is created on Op
     
     <nav>
       
-        <a href="https://github.com/guillaumejparis" class="md-author" title="@guillaumejparis">
+        <a href="https://github.com/Dimfacion" class="md-author" title="@Dimfacion">
           
-          <img src="https://avatars.githubusercontent.com/u/4204277?v=4&size=72" alt="guillaumejparis">
+          <img src="https://avatars.githubusercontent.com/u/10406250?v=4&size=72" alt="Dimfacion">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
           
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+        <a href="https://github.com/guillaumejparis" class="md-author" title="@guillaumejparis">
+          
+          <img src="https://avatars.githubusercontent.com/u/4204277?v=4&size=72" alt="guillaumejparis">
         </a>
       
         <a href="https://github.com/gabriel-peze" class="md-author" title="@gabriel-peze">
