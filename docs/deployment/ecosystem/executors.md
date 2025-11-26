@@ -13,6 +13,7 @@ architectures. This table below summarizes the information about each agent.
 | **OpenAEV Agent (native/default)** | Open source   | As a user session, user service or system service | Script            | A standard or admin background process | As a user standard, user admin or system admin | Yes, depending on the user and installation mode |
 | **Tanium Agent**                   | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |                              
 | **Crowdstrike Falcon Agent**       | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |                              
+| **SentinelOne Agent**              | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |
 | **Caldera Agent**                  | Open source   | As a user session                                 | Script            | An admin background process            | As a user admin                                | Yes, depending on the user                       |                      
 
 ## OpenAEV Agent
@@ -27,11 +28,17 @@ payloads on endpoints.
 The Tanium agent can be leveraged to execute implants as detached processes that will then execute payloads, according
 to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/overview).
 
+The implants will be downloaded to these folders on the different assets:
+
+* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
+* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
+
+where XXXXX will be a completely random UUID, generated for each inject that will be executed.
+This ensures that the implants are unique and will be deleted on assets' restart.
+
 ### Configure the Tanium Platform
 
-We
-provide [two Tanium packages](https://github.com/OpenAEV-Platform/openaev/blob/master/openaev-api/src/main/java/io/openaev/executors/tanium/openaev-tanium-packages.json)
-to be imported into the Tanium platform.
+We provide [two Tanium packages](https://github.com/OpenAEV-Platform/openaev/blob/master/openaev-api/src/main/java/io/openaev/executors/tanium/openaev-tanium-packages.json) to be imported into the Tanium platform.
 
 ![Tanium Packages](../assets/tanium-packages.png)
 
@@ -118,8 +125,8 @@ according to the [OpenAEV architecture](https://docs.openaev.io/latest/deploymen
 
 The implants will be downloaded to these folders on the different assets:
 
-* On Windows assets: `C:\Windows\Temp\.openaev\implant-XXXXX`
-* On Linux or MacOS assets: `/tmp/.openaev/implant-XXXXX`
+* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
+* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
 
 where XXXXX will be a completely random UUID, generated for each inject that will be executed.
 This ensures that the implants are unique and will be deleted on assets' restart.
@@ -179,14 +186,7 @@ Put the following Input schema:
 | script access         | Users with the role of RTR Administrator or RTR Active Responder |
 | shared with workflows | yes                                                              |
 
-Put the following script **(release version < 1.16.0)**:
-
-```PowerShell
-$command = $args[0] | ConvertFrom-Json | Select -ExpandProperty 'command';
-cmd.exe /d /c powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NonInteractive -NoProfile -Command "Invoke-Expression ([System.Text.Encoding]::UTF8.GetString([convert]::FromBase64String('$command')))"
-```
-
-Put the following script **(release version >= 1.16.0)**:
+Put the following script:
 
 ```PowerShell
 $command = $args[0] | ConvertFrom-Json | Select -ExpandProperty 'command';
@@ -285,6 +285,107 @@ Endpoint on the OpenAEV endpoint page.
 
     You are now ready to leverage your CrowdStrike platform to run OpenAEV payloads!
 
+---
+<a id="sentinelone-agent"></a>
+## SentinelOne Agent
+
+The SentinelOne agent can be leveraged to execute implants as detached processes that will then execute payloads
+according to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/overview).
+
+The implants will be downloaded to these folders on the different assets:
+
+* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
+* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
+
+where XXXXX will be a completely random UUID, generated for each inject that will be executed.
+This ensures that the implants are unique and will be deleted on assets' restart.
+
+!!! warning "SentinelOne"
+
+    Please note that the SentinelOne license with add-on “remote script orchestration” is required to launch SentinelOne scripts with OpenAEV → see in SentinelOne/Settings/Configuration/Add-ons
+
+
+### Configure the SentinelOne Platform
+
+#### Upload OpenAEV scripts
+
+First of all, you need to create two custom scripts, one for Windows and one for Unix, covering both Linux and MacOS
+systems.
+
+To create it, go to `Automation` > `Remote Ops` > `Create new`. The names
+of the scripts can be changed if necessary, the ids will be put in the OpenAEV configuration.
+
+*Unix Script*
+
+Upload the following script (encoded for Unix):
+
+[Download](../assets/openaev_subprocessor_unix.sh)
+
+Put the following Input schema:
+
+![SentinelOne unix script1](../assets/sentinelone-unix-script1.png)
+![SentinelOne unix script1](../assets/sentinelone-unix-script2.png)
+
+*Windows script*
+
+Upload the following script (encoded for Windows):
+
+[Download](../assets/openaev_subprocessor_windows.ps1)
+
+Put the following Input schema:
+
+![SentinelOne unix script1](../assets/sentinelone-windows-script1.png)
+![SentinelOne unix script1](../assets/sentinelone-windows-script2.png)
+
+Once created, your Remote Ops scripts should have something like this:
+
+![SentinelOne RTR script](../assets/sentinelone-scripts.png)
+
+#### Create a wrapper with your targeted assets
+
+To create a wrapper (account/site/group), go to `Settings` > `Accounts/Sites`.
+
+### Configure the OpenAEV platform
+
+!!! warning "SentinelOne API Key"
+
+    Please note that the SentinelOne API key should have the following minimum role: “IR Team”. The API key and the scripts must be created for and with the same user.
+
+To use the SentinelOne executor, just fill the following configuration.
+
+| Parameter                                                  | Environment variable                                       | Default value | Description                                                                                                                                     |
+|:-----------------------------------------------------------|:-----------------------------------------------------------|:--------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
+| executor.sentinelone.enable                                | EXECUTOR_SENTINELONE_ENABLE                                | `false`       | Enable the SentinelOne executor                                                                                                                 |
+| executor.sentinelone.url                                   | EXECUTOR_SENTINELONE_URL                                   |               | SentinelOne URL, the API version used is the 2.1                                                                                                |
+| executor.sentinelone.api-register-interval                 | EXECUTOR_SENTINELONE_API_REGISTER_INTERVAL                 | 1200          | SentinelOne API interval to register/update the accounts/sites/groups/agents in OpenAEV (in seconds)                                            | 
+| executor.sentinelone.api-batch-execution-action-pagination | EXECUTOR_SENTINELONE_API_BATCH_EXECUTION_ACTION_PAGINATION | 2500          | SentinelOne API pagination per second to set for agents batch executions (number of agents sent per second to SentinelOne to execute a payload) | 
+| executor.sentinelone.api-key                               | EXECUTOR_SENTINELONE_API_KEY                               |               | SentinelOne API key                                                                                                                             |
+| executor.sentinelone.account-id                            | EXECUTOR_SENTINELONE_ACCOUNT_ID                            |               | SentinelOne account id or accounts ids separated with commas (optional if site or group is filled)                                              |
+| executor.sentinelone.site-id                               | EXECUTOR_SENTINELONE_SITE_ID                               |               | SentinelOne site id or sites ids separated with commas (optional if account or group is filled)                                                 |
+| executor.sentinelone.group-id                              | EXECUTOR_SENTINELONE_GROUP_ID                              |               | SentinelOne group id or groups ids separated with commas (optional if site or account is filled)                                                |
+| executor.sentinelone.windows-script-id                     | EXECUTOR_SENTINELONE_WINDOWS_SCRIPT_ID                     |               | Id of the OpenAEV SentinelOne Windows script                                                                                                    |
+| executor.sentinelone.unix-script-id                        | EXECUTOR_SENTINELONE_UNIX_SCRIPT_ID                        |               | Id of the OpenAEV SentinelOne Unix script                                                                                                       |
+
+### Checks
+
+Once enabled, you should see SentinelOne available in your `Install agents` section
+
+![SentinelOne available agent](../assets/sentinelone-agents.png)
+
+Also, the assets and the asset groups in the selected accounts/sites/groups should now be available in the endpoints and asset
+groups sections in OpenAEV:
+
+![Sentinel Endpoints](../assets/sentinelone-endpoints.png)
+
+NB : An Asset can only have one SentinelOne agent installed due to the uniqueness of the MAC address parameters. If you
+try to install again a SentinelOne agent on a platform, it will overwrite the actual one and you will always see one
+Endpoint on the OpenAEV endpoint page.
+
+!!! success "Installation done"
+
+    You are now ready to leverage your SentinelOne platform to run OpenAEV payloads!
+
+---
 ## Caldera Agent
 
 The Caldera agent can be leveraged to execute implants as detached processes that will the execute payloads according to
