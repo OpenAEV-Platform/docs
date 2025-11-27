@@ -109,7 +109,7 @@ Imagine you deployed an OpenAEV agent on a Linux endpoint named `endpoint-lin-01
 
 ### Step 1 — Create the payload
 
-   ```bash
+   ```
    echo "OpenAEV Atomic Test"
    ````
 
