@@ -349,7 +349,7 @@ To create a wrapper (account/site/group), go to `Settings` > `Accounts/Sites`.
 
 !!! warning "SentinelOne API Key"
 
-    Please note that the SentinelOne API key should have the following minimum role: “IR Team”. The API key and the scripts must be created for and with the same user.
+    Please note that the SentinelOne API key created in "Settings/Users/Service Users" should have the following minimum role: “IR Team”. The API key and the scripts must be created for and with the same user and the required account/site.
 
 To use the SentinelOne executor, just fill the following configuration.
 
