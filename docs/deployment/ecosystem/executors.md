@@ -23,6 +23,8 @@ payloads on endpoints.
 
 [Learn More](../../usage/openaev-agent.md)
 
+---
+<a id="tanium-agent"></a>
 ## Tanium Agent
 
 The Tanium agent can be leveraged to execute implants as detached processes that will then execute payloads, according
@@ -79,15 +81,17 @@ Once configured and imported, retrieve the package IDs from the URL:
 
 To use the Tanium executor, fill the following configuration:
 
-| Parameter                          | Environment variable               | Default value | Description                                     |
-|:-----------------------------------|:-----------------------------------|:--------------|:------------------------------------------------|
-| executor.tanium.enable             | EXECUTOR_TANIUM_ENABLE             | `false`       | Enable the Tanium executor                      |
-| executor.tanium.url                | EXECUTOR_TANIUM_URL                |               | Tanium API URL                                  |
-| executor.tanium.api-key            | EXECUTOR_TANIUM_API-KEY            |               | Tanium API key                                  |
-| executor.tanium.computer-group-id  | EXECUTOR_TANIUM_COMPUTER_GROUP_ID  | `1`           | Tanium Computer Group to be used in simulations |
-| executor.tanium.action-group-id    | EXECUTOR_TANIUM_ACTION_GROUP_ID    | `4`           | Tanium Action Group to apply actions to         |
-| executor.tanium.windows-package-id | EXECUTOR_TANIUM_WINDOWS_PACKAGE_ID |               | ID of the OpenAEV Tanium Windows package        |
-| executor.tanium.unix-package-id    | EXECUTOR_TANIUM_UNIX_PACKAGE_ID    |               | ID of the OpenAEV Tanium Unix package           |
+| Parameter                                             | Environment variable                                  | Default value | Description                                                                                                                                       |
+|:------------------------------------------------------|:------------------------------------------------------|:--------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
+| executor.tanium.enable                                | EXECUTOR_TANIUM_ENABLE                                | `false`       | Enable the Tanium executor                                                                                                                        |
+| executor.tanium.url                                   | EXECUTOR_TANIUM_URL                                   |               | Tanium API URL                                                                                                                                    |
+| executor.tanium.api-key                               | EXECUTOR_TANIUM_API-KEY                               |               | Tanium API key                                                                                                                                    |
+| executor.tanium.api-register-interval                 | EXECUTOR_TANIUM_API_REGISTER_INTERVAL                 | 1200          | Tanium API interval to register/update the computer groups/endpoints in OpenAEV (in seconds)                                                      | 
+| executor.tanium.api-batch-execution-action-pagination | EXECUTOR_TANIUM_API_BATCH_EXECUTION_ACTION_PAGINATION | 100           | Tanium API pagination per 5 seconds to set for endpoints batch executions (number of endpoints sent per 5 seconds to Tanium to execute a payload) | 
+| executor.tanium.computer-group-id                     | EXECUTOR_TANIUM_COMPUTER_GROUP_ID                     | `1`           | Tanium Computer Group or Computer Groups to be used in simulations separated with commas                                                          |
+| executor.tanium.action-group-id                       | EXECUTOR_TANIUM_ACTION_GROUP_ID                       | `4`           | Tanium Action Group to apply actions to                                                                                                           |
+| executor.tanium.windows-package-id                    | EXECUTOR_TANIUM_WINDOWS_PACKAGE_ID                    |               | ID of the OpenAEV Tanium Windows package                                                                                                          |
+| executor.tanium.unix-package-id                       | EXECUTOR_TANIUM_UNIX_PACKAGE_ID                       |               | ID of the OpenAEV Tanium Unix package                                                                                                             |
 
 !!! note "Tanium API Key"
 
@@ -254,17 +258,17 @@ applied.
 
 To use the CrowdStrike executor, just fill the following configuration.
 
-| Parameter                                                  | Environment variable                                       | Default value                      | Description                                                                                                                                   |
-|:-----------------------------------------------------------|:-----------------------------------------------------------|:-----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| executor.crowdstrike.enable                                | EXECUTOR_CROWDSTRIKE_ENABLE                                | `false`                            | Enable the Crowdstrike executor                                                                                                               |
-| executor.crowdstrike.api-url                               | EXECUTOR_CROWDSTRIKE_API_URL                               | `https://api.us-2.crowdstrike.com` | Crowdstrike API url                                                                                                                           |
-| executor.crowdstrike.api-register-interval                 | EXECUTOR_CROWDSTRIKE_API_REGISTER_INTERVAL                 | 1200                               | Crowdstrike API interval to register/update the host groups/hosts/agents in OpenAEV (in seconds)                                              | 
-| executor.crowdstrike.api-batch-execution-action-pagination | EXECUTOR_CROWDSTRIKE_API_BATCH_EXECUTION_ACTION_PAGINATION | 2500                               | Crowdstrike API pagination per second to set for hosts batch executions (number of hosts sent per second to Crowdstrike to execute a payload) | 
-| executor.crowdstrike.client-id                             | EXECUTOR_CROWDSTRIKE_CLIENT_ID                             |                                    | Crowdstrike client id                                                                                                                         |
-| executor.crowdstrike.client-secret                         | EXECUTOR_CROWDSTRIKE_CLIENT_SECRET                         |                                    | Crowdstrike client secret                                                                                                                     |
-| executor.crowdstrike.host-group                            | EXECUTOR_CROWDSTRIKE_HOST_GROUP                            |                                    | Crowdstrike host group id or hosts groups ids separated with commas                                                                           |
-| executor.crowdstrike.windows-script-name                   | EXECUTOR_CROWDSTRIKE_WINDOWS_SCRIPT_NAME                   | `OpenAEV Subprocessor (Windows)`   | Name of the OpenAEV Crowdstrike windows script                                                                                                |
-| executor.crowdstrike.unix-script-name                      | EXECUTOR_CROWDSTRIKE_UNIX_SCRIPT_NAME                      | `OpenAEV Subprocessor (Unix)`      | Name of the OpenAEV Crowdstrike unix script                                                                                                   |
+| Parameter                                                  | Environment variable                                       | Default value                      | Description                                                                                                                                         |
+|:-----------------------------------------------------------|:-----------------------------------------------------------|:-----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
+| executor.crowdstrike.enable                                | EXECUTOR_CROWDSTRIKE_ENABLE                                | `false`                            | Enable the Crowdstrike executor                                                                                                                     |
+| executor.crowdstrike.api-url                               | EXECUTOR_CROWDSTRIKE_API_URL                               | `https://api.us-2.crowdstrike.com` | Crowdstrike API url                                                                                                                                 |
+| executor.crowdstrike.api-register-interval                 | EXECUTOR_CROWDSTRIKE_API_REGISTER_INTERVAL                 | 1200                               | Crowdstrike API interval to register/update the host groups/hosts/agents in OpenAEV (in seconds)                                                    | 
+| executor.crowdstrike.api-batch-execution-action-pagination | EXECUTOR_CROWDSTRIKE_API_BATCH_EXECUTION_ACTION_PAGINATION | 2500                               | Crowdstrike API pagination per 5 seconds to set for hosts batch executions (number of hosts sent per 5 seconds to Crowdstrike to execute a payload) | 
+| executor.crowdstrike.client-id                             | EXECUTOR_CROWDSTRIKE_CLIENT_ID                             |                                    | Crowdstrike client id                                                                                                                               |
+| executor.crowdstrike.client-secret                         | EXECUTOR_CROWDSTRIKE_CLIENT_SECRET                         |                                    | Crowdstrike client secret                                                                                                                           |
+| executor.crowdstrike.host-group                            | EXECUTOR_CROWDSTRIKE_HOST_GROUP                            |                                    | Crowdstrike host group id or hosts groups ids separated with commas                                                                                 |
+| executor.crowdstrike.windows-script-name                   | EXECUTOR_CROWDSTRIKE_WINDOWS_SCRIPT_NAME                   | `OpenAEV Subprocessor (Windows)`   | Name of the OpenAEV Crowdstrike windows script                                                                                                      |
+| executor.crowdstrike.unix-script-name                      | EXECUTOR_CROWDSTRIKE_UNIX_SCRIPT_NAME                      | `OpenAEV Subprocessor (Unix)`      | Name of the OpenAEV Crowdstrike unix script                                                                                                         |
 
 ### Checks
 
@@ -353,18 +357,18 @@ To create a wrapper (account/site/group), go to `Settings` > `Accounts/Sites`.
 
 To use the SentinelOne executor, just fill the following configuration.
 
-| Parameter                                                  | Environment variable                                       | Default value | Description                                                                                                                                     |
-|:-----------------------------------------------------------|:-----------------------------------------------------------|:--------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| executor.sentinelone.enable                                | EXECUTOR_SENTINELONE_ENABLE                                | `false`       | Enable the SentinelOne executor                                                                                                                 |
-| executor.sentinelone.url                                   | EXECUTOR_SENTINELONE_URL                                   |               | SentinelOne URL, the API version used is the 2.1                                                                                                |
-| executor.sentinelone.api-register-interval                 | EXECUTOR_SENTINELONE_API_REGISTER_INTERVAL                 | 1200          | SentinelOne API interval to register/update the accounts/sites/groups/agents in OpenAEV (in seconds)                                            | 
-| executor.sentinelone.api-batch-execution-action-pagination | EXECUTOR_SENTINELONE_API_BATCH_EXECUTION_ACTION_PAGINATION | 2500          | SentinelOne API pagination per second to set for agents batch executions (number of agents sent per second to SentinelOne to execute a payload) | 
-| executor.sentinelone.api-key                               | EXECUTOR_SENTINELONE_API_KEY                               |               | SentinelOne API key                                                                                                                             |
-| executor.sentinelone.account-id                            | EXECUTOR_SENTINELONE_ACCOUNT_ID                            |               | SentinelOne account id or accounts ids separated with commas (optional if site or group is filled)                                              |
-| executor.sentinelone.site-id                               | EXECUTOR_SENTINELONE_SITE_ID                               |               | SentinelOne site id or sites ids separated with commas (optional if account or group is filled)                                                 |
-| executor.sentinelone.group-id                              | EXECUTOR_SENTINELONE_GROUP_ID                              |               | SentinelOne group id or groups ids separated with commas (optional if site or account is filled)                                                |
-| executor.sentinelone.windows-script-id                     | EXECUTOR_SENTINELONE_WINDOWS_SCRIPT_ID                     |               | Id of the OpenAEV SentinelOne Windows script                                                                                                    |
-| executor.sentinelone.unix-script-id                        | EXECUTOR_SENTINELONE_UNIX_SCRIPT_ID                        |               | Id of the OpenAEV SentinelOne Unix script                                                                                                       |
+| Parameter                                                  | Environment variable                                       | Default value | Description                                                                                                                                           |
+|:-----------------------------------------------------------|:-----------------------------------------------------------|:--------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
+| executor.sentinelone.enable                                | EXECUTOR_SENTINELONE_ENABLE                                | `false`       | Enable the SentinelOne executor                                                                                                                       |
+| executor.sentinelone.url                                   | EXECUTOR_SENTINELONE_URL                                   |               | SentinelOne URL, the API version used is the 2.1                                                                                                      |
+| executor.sentinelone.api-register-interval                 | EXECUTOR_SENTINELONE_API_REGISTER_INTERVAL                 | 1200          | SentinelOne API interval to register/update the accounts/sites/groups/agents in OpenAEV (in seconds)                                                  | 
+| executor.sentinelone.api-batch-execution-action-pagination | EXECUTOR_SENTINELONE_API_BATCH_EXECUTION_ACTION_PAGINATION | 2500          | SentinelOne API pagination per 5 seconds to set for agents batch executions (number of agents sent per 5 seconds to SentinelOne to execute a payload) | 
+| executor.sentinelone.api-key                               | EXECUTOR_SENTINELONE_API_KEY                               |               | SentinelOne API key                                                                                                                                   |
+| executor.sentinelone.account-id                            | EXECUTOR_SENTINELONE_ACCOUNT_ID                            |               | SentinelOne account id or accounts ids separated with commas (optional if site or group is filled)                                                    |
+| executor.sentinelone.site-id                               | EXECUTOR_SENTINELONE_SITE_ID                               |               | SentinelOne site id or sites ids separated with commas (optional if account or group is filled)                                                       |
+| executor.sentinelone.group-id                              | EXECUTOR_SENTINELONE_GROUP_ID                              |               | SentinelOne group id or groups ids separated with commas (optional if site or account is filled)                                                      |
+| executor.sentinelone.windows-script-id                     | EXECUTOR_SENTINELONE_WINDOWS_SCRIPT_ID                     |               | Id of the OpenAEV SentinelOne Windows script                                                                                                          |
+| executor.sentinelone.unix-script-id                        | EXECUTOR_SENTINELONE_UNIX_SCRIPT_ID                        |               | Id of the OpenAEV SentinelOne Unix script                                                                                                             |
 
 ### Checks
 
