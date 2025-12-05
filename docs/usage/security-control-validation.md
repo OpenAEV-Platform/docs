@@ -31,7 +31,7 @@ The following Domains are currently supported in OpenAEV:
 ### Payloads define the Domain
 Domains are primarily defined at the Payload level. Each payload declares one or more Domains that describe the security control category involved in its execution. This ensures consistent and predictable classification across the platform.
 
-### Injectors and Contracts
+### Injectors Contracts
 In some cases, an Injector Contract may also carry a Domain.  
 However, when an injector uses a Payload, the Payload’s Domain always takes precedence. This ensures that the Domain reflects the actual technical behavior of the executed action.
 
@@ -42,4 +42,3 @@ Domains allow users to:
 - Filter and interpret scenario results based on the type of security control tested.
 - Design scenario flows that focus on specific areas of the security stack.
 - Generate reports organized by security capability (endpoint, network, cloud, etc.).
-- Better understand how OpenAEV interacts with different layers of the environment.
