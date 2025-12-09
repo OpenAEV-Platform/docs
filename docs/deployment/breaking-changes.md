@@ -34,10 +34,10 @@ For more details, see [this migration guide](breaking-changes/2.0.0-openaev-rena
 <a id="openaev-scv"></a>
 #### OpenAEV SCV
 
-Following the evolution of scope in OpenAEV (Open Adversarial Exposure Validation), it was decided to add a layer of Security Control Validation.
+Following the evolution of scope in OpenAEV (Open Adversarial Exposure Validation), it was decided to add a layer of Security Control Validation (SCV).
 
 SCV provide a classification layer that describes the type of security control involved during the execution of a scenario in OpenAEV.
 
-They help users understand which defensive capability is being evaluated and allow scenarios and payloads to be interpreted with clearer operational intent.
+This classification identifies the defensive capability being evaluated and allows scenarios and payloads to be interpreted with clearer operational intent.
 
 For more details, see [this migration guide](breaking-changes/2.1.0-openaev-scv.md)

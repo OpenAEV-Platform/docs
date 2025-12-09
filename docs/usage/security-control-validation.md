@@ -1,5 +1,5 @@
 # Overview
-Domains provide a classification layer that describes the type of security control involved during the execution of a scenario in OpenAEV. They help users understand which defensive capability is being evaluated and allow scenarios and payloads to be interpreted with clearer operational intent.
+Domains provide a classification layer that describes the type of security control involved during the execution of a scenario in OpenAEV. This classification identifies the defensive capability being evaluated and allows scenarios and payloads to be interpreted with clearer operational intent.
 
 ## Domains
 
@@ -19,7 +19,7 @@ The following Domains are currently supported in OpenAEV:
 |------------------------|--------------------------------------------------------------------------------------------------------------------|
 | **ENDPOINT**           | Evaluates endpoints security controls such as EDR, SIEM                  |
 | **DATA EXFILTRATION**  | Assesses the ability to detect or block attempts to exfiltrate data and check security controls like DLP & SIEM                                           |
-| **URL FILTERING**      | Validates mechanisms controlling web access and URL categorization or filtering   with security systems like proxy, ZTNA                                  |
+| **URL FILTERING**      | Validates mechanisms controlling web access and URL categorization or filtering with security systems like proxy, ZTNA                                  |
 | **TABLE-TOP**          | Represents process-oriented or organizational exercises involving manual decision-making or coordinated response  |
 | **CLOUD**              | Evaluates cloud-native security controls including IAM, SIEM     |
 | **NETWORK**            | Targets network security capabilities such as segmentation, IDS/IPS, firewalls, traffic inspection and SIEM             |
