@@ -11,7 +11,6 @@ This table regroups all the breaking changes introduced, with the corresponding 
 | Change                                | Deprecated in | Changed in |
 |:--------------------------------------|:--------------|:-----------|
 | [OpenAEV renaming](#openaev-renaming) | 1.18.20       | 2.0.0      |
-| [OpenAEV SCV](#openaev-scv)           | 2.0.0         | 2.1.0      |
 
 ## OpenAEV 2.0.0
 
@@ -29,15 +28,3 @@ All those changes require manual modifications to upgrade from previous versions
 Take note that the first startup can be longer, all modifications have to be applied, and it can take a bit longer than usual.
 
 For more details, see [this migration guide](breaking-changes/2.0.0-openaev-renaming.md)
-
-
-<a id="openaev-scv"></a>
-#### OpenAEV SCV
-
-Following the evolution of scope in OpenAEV (Open Adversarial Exposure Validation), it was decided to add a layer of Security Control Validation (SCV).
-
-SCV provide a classification layer that describes the type of security control involved during the execution of a scenario in OpenAEV.
-
-This classification identifies the defensive capability being evaluated and allows scenarios and payloads to be interpreted with clearer operational intent.
-
-For more details, see [this migration guide](breaking-changes/2.1.0-openaev-scv.md)
