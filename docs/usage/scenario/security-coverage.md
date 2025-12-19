@@ -33,7 +33,7 @@ OpenAEV then:
 > Attack Patterns
 
 3. Extracts relevant **Attack Patterns references**
-4. Resolves **targets** (e.g., Asset Groups) using **Custom Tag Rule** labeled `OpenCTI`, extracting the associated **platforms and architectures** to match compatible payloads.
+4. Resolves Asset Groups using **Custom Tag Rule** labeled `OpenCTI`, extracting the associated **platforms and architectures** to match compatible payloads.
 5. Generates injects for each extracted entity
 6. Schedules the scenario for execution
 
@@ -72,7 +72,7 @@ After parsing and validating the **Security Coverage STIX** object, OpenAEV foll
 
         - If the referenced **Attack Pattern** exists in OpenAEV  
           (matched by **External ID** or **Name**) **and** a related [Payload](../payloads/payloads.md) exists that
-          matches the **platforms and architectures** derived from the targets resolved via **Custom Tag Rule
+          matches the **platforms and architectures** derived from the Asset groups resolved via **Custom Tag Rule
           labeled `opencti`**.   
           => **Concrete Inject** is created.
 
@@ -86,13 +86,13 @@ After parsing and validating the **Security Coverage STIX** object, OpenAEV foll
 > - Attack Patterns defined in **OpenCTI** (by External ID or Name) must be aligned with those configured in **OpenAEV
     **.
 > - Targets are resolved via **Custom Tag Rule labeled `opencti`**, and the corresponding **platforms and architectures
-    ** are extracted from these targets.
+    ** are extracted from these Asset groups.
 > - Payloads are matched against the Attack Patterns **and** must be compatible with the extracted platforms and
     architectures.
 >
 > In other words, inject creation only occurs when:
 > 1. The Attack Pattern exists in OpenAEV, and
-> 2. A payload exists that matches both the Attack Pattern **and** the platforms/architectures derived from the targets
+> 2. A payload exists that matches both the Attack Pattern **and** the platforms/architectures derived from the Asset groups
      defined in the Custom Tag Rules.
 >
 > If either condition is not met, a **Placeholder Inject** is created to highlight missing coverage.
