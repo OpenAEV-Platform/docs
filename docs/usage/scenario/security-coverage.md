@@ -33,7 +33,7 @@ OpenAEV then:
 > Attack Patterns
 
 3. Extracts relevant **Attack Patterns references**
-4. Resolves Asset Groups using **Custom Tag Rule** labeled `OpenCTI`, extracting the associated **platforms and architectures** to match compatible payloads.
+4. Resolves Asset Groups using **Custom Tag Rule** labeled `opencti`, extracting the associated **platforms and architectures** to match compatible payloads.
 5. Generates injects for each extracted entity
 6. Schedules the scenario for execution
 
@@ -111,7 +111,7 @@ Inject creation depends on matching the **Object Reference** values between Open
 After injects are generated:
 
 - Review and customize the **Scenario** to match your organization’s needs.
-- Assign appropriate **Targets** to each inject.
+- Assign appropriate **Asset groups** to each inject.
 - Optionally, configure default **Asset Groups** for scenarios created from OpenCTI using
   the [Default Asset Groups](../default_asset_rules.md) page.
 
