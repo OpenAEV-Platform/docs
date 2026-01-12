@@ -40,8 +40,7 @@ To learn more about Xtm Composer architecture, refer to the [dedicated documenta
       
         - **Instance names**: Two instances can't share the same name
         - **Validation error**: If a duplicate name is detected, a blocking error will prevent deployment until a unique name is provided
-        - **Confidence level**: set the desired confidence level for the service account.
-        - **API key** (encrypted and securely stored).
+        - **Log level**: set the desired confidence log level for the service account.
         - **Additional options**: collector, injector or executor specific configuration.
 
 3. Click **Create**. Once the collector is created, you will be redirected to the collector instance view.
