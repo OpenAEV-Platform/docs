@@ -34,24 +34,22 @@ To learn more about Xtm Composer architecture, refer to the [dedicated documenta
 ## Deploying a collector, injector or executor
 1. Click the **Deploy** button on an external collector, injector or executor card or from the detail view. A form will appear with required configuration fields.
 2. Fill in the required options (you can also expand **Advanced options** to configure additional settings)
+   ![instance form](../../assets/integration-manager/instance-form-sample.png)
 
-!!! warning "Configuration information"
-    
-    - **Instance names**: Two instances can't share the same name
-    - **Validation error**: If a duplicate name is detected, a blocking error will prevent deployment until a unique name is provided
-    - **Confidence level**: set the desired confidence level for the service account.
-    - **API key** (encrypted and securely stored).
-    - **Additional options**: collector, injector or executor specific configuration.
-
-![instance form](../../assets/integration-manager/instance-form-sample.png)
+    !!! note "Configuration information"
+      
+        - **Instance names**: Two instances can't share the same name
+        - **Validation error**: If a duplicate name is detected, a blocking error will prevent deployment until a unique name is provided
+        - **Confidence level**: set the desired confidence level for the service account.
+        - **API key** (encrypted and securely stored).
+        - **Additional options**: collector, injector or executor specific configuration.
 
 3. Click **Create**. Once the collector is created, you will be redirected to the collector instance view.
 
-!!! note "Instance created"
-
-    Newly created external collectors, injectors or executors are not started automatically. 
-    You can still update their configuration via the **Update** action.
-
+    !!! note "Instance created"
+    
+        Newly created external collectors, injectors or executors are not started automatically. 
+        You can still update their configuration via the **Update** action.
 
 5. When ready, click **Start** to run it.
 6. From the instance view, you can also check the **Logs** tab. The displayed logs depend on the logging level configured.
