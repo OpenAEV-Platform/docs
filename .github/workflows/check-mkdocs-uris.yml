@@ -32,7 +32,7 @@ jobs:
         run: |
           echo "Checking mkdocs.yml for URIs (use '-' instead of '_')"
 
-          INVALID_PATHS=$(grep '\.md' mkdocs.yml | grep '_')
+          INVALID_PATHS=$(grep '.md' mkdocs.yml | grep '_')
   
           if [ -n "$INVALID_PATHS" ]; then
             echo "❌ Invalid MkDocs URIs detected (use '-' instead of '_'):"
