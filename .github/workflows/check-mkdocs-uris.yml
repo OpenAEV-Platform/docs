@@ -32,8 +32,8 @@ jobs:
         run: |
           echo "Checking mkdocs.yml for URIs (use '-' instead of '_')"
 
-          INVALID_PATHS=$(grep '.md' mkdocs.yml | grep '_' | grep -v 'pymdownx.superfences')
-  
+          INVALID_PATHS=$(grep '.md' mkdocs.yml | grep '_' | grep -Ev 'pymdownx\.superfences|md_in_html')          
+          
           if [ -n "$INVALID_PATHS" ]; then
             echo "❌ Invalid MkDocs URIs detected (use '-' instead of '_'):"
             echo "$INVALID_PATHS" | sed 's/^/ - /'
