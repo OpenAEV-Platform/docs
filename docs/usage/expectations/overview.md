@@ -41,6 +41,9 @@ Expectations fall into **two categories**, depending on how validation occurs.
 Manual expectations are validated by an **organizer**.
 They are used to evaluate **human actions** such as decision-making or escalation.
 
+⚠️ These expectations can only be used in the context of human-based injects, such as email or SMS, where a real person
+is expected to read, interpret, and react to inject.
+
 Typical use cases:
 
 * tabletop exercises
@@ -55,6 +58,9 @@ They rely on:
 
 * connected security tools
 * or manually provided technical results
+
+⚠️ These expectations can only be used in the context of technical injects, where system or security signals are
+produced automatically (for example: logs, alerts, detections, or telemetry).
 
 They are essential for **technical simulations** and **Breach & Attack Simulation** use cases.
 
