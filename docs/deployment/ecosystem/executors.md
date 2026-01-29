@@ -79,7 +79,7 @@ Once configured and imported, retrieve the package IDs from the URL:
 
 ### Configure the OpenAEV Platform
 
-To use the Tanium executor, fill the following configuration:
+To use the Tanium executor, fill the following configuration in the Integrations (Executors) tab from OpenAEV menu.
 
 | Parameter                                             | Environment variable                                  | Default value  | Description                                                                                                                                       |
 |:------------------------------------------------------|:------------------------------------------------------|:---------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -257,7 +257,7 @@ applied.
 
     Please note that the CrowdStrike API key should have the following permissions: API integrations, Hosts, Host groups, Real time response.
 
-To use the CrowdStrike executor, just fill the following configuration.
+To use the CrowdStrike executor, just fill the following configuration in the Integrations (Executors) tab from OpenAEV menu.
 
 | Parameter                                                  | Environment variable                                        | Default value                      | Description                                                                                                                                         |
 |:-----------------------------------------------------------|:------------------------------------------------------------|:-----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -290,6 +290,93 @@ Endpoint on the OpenAEV endpoint page.
 !!! success "Installation done"
 
     You are now ready to leverage your CrowdStrike platform to run OpenAEV payloads!
+
+---
+<a id="paloaltocortex-agent"></a>
+## Palo Alto Cortex Agent
+
+The Palo Alto Cortex agent can be leveraged to execute implants as detached processes that will then execute payloads
+according to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/overview).
+
+The implants will be downloaded to these folders on the different assets:
+
+* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
+* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
+
+where XXXXX will be a completely random UUID, generated for each inject that will be executed.
+This ensures that the implants are unique and will be deleted on assets' restart.
+
+### Configure the Palo Alto Cortex Platform
+
+#### Upload OpenAEV scripts
+
+First of all, you need to create one custom script for Unix, covering both Linux and MacOS systems.
+For Windows, we use the existing Palo Alto script named `execute_commands`.
+
+To create it, go to `Incident Response` > `Action Center` > `Agent Script Library` > `+ New Script`. The names
+of the scripts can be changed if necessary, the ids will be put in the OpenAEV configuration.
+
+*Unix Script*
+
+Upload the following Python script:
+
+[Download](../assets/paloaltocortex_subprocessor_unix.py)
+
+Put the following Input schema:
+
+![Palo Alto Cortex unix script1](../assets/paloaltocortex-unix-script.png)
+
+*Windows script*
+
+Existing Palo Alto script named `execute_commands`.
+
+Once created, your Remote Ops scripts should have something like this:
+
+![Palo Alto Cortex RTR script](../assets/paloaltocortex-scripts.png)
+
+#### Create a group with your targeted assets
+
+To create a group, go to `Endpoints` > `Endpoint Groups`.
+
+### Configure the OpenAEV platform
+
+!!! warning "Palo Alto Cortex API Key"
+
+    Please note that the Palo Alto Cortex API key created in "Settings/API Keys" should have the following minimum role: “Instance Administrator” and security level: "Standard".
+
+To use the Palo Alto Cortex executor, just fill the following configuration in the Integrations (Executors) tab from OpenAEV menu.
+
+| Parameter                                                     | Environment variable                                          | Default value | Description                                                                                                                                                           |
+|:--------------------------------------------------------------|:--------------------------------------------------------------|:--------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| executor.paloaltocortex.enable                                | EXECUTOR_PALOALTOCORTEX_ENABLE                                | `false`       | Enable the Palo Alto Cortex executor                                                                                                                                  |
+| executor.paloaltocortex.url                                   | EXECUTOR_PALOALTOCORTEX_URL                                   |               | Palo Alto Cortex URL, the API version used is the v1                                                                                                                  |
+| executor.paloaltocortex.api-register-interval                 | EXECUTOR_PALOALTOCORTEX_API_REGISTER_INTERVAL                 | 1200          | Palo Alto Cortex API interval to register/update the accounts/sites/groups/agents in OpenAEV (in seconds)                                                             | 
+| executor.paloaltocortex.api-batch-execution-action-pagination | EXECUTOR_PALOALTOCORTEX_API_BATCH_EXECUTION_ACTION_PAGINATION | 100           | Palo Alto Cortex API pagination per 5 seconds to set for endpoints batch executions (number of endpoints sent per 5 seconds to Palo Alto Cortex to execute a payload) | 
+| executor.paloaltocortex.clean-implant-interval                | EXECUTOR_PALOALTOCORTEX_CLEAN_IMPLANT_INTERVAL                | 8             | Palo Alto Cortex clean old implant interval (in hours)                                                                                                                | 
+| executor.paloaltocortex.api-key-id                            | EXECUTOR_PALOALTOCORTEX_API_KEY_ID                            |               | Palo Alto Cortex API key id                                                                                                                                           |
+| executor.paloaltocortex.api-key                               | EXECUTOR_PALOALTOCORTEX_API_KEY                               |               | Palo Alto Cortex API key                                                                                                                                              |
+| executor.paloaltocortex.group-name                            | EXECUTOR_PALOALTOCORTEX_GROUP_ID                              |               | Palo Alto Cortex group name or groups names separated with commas                                                                                                     |
+| executor.paloaltocortex.windows-script-id                     | EXECUTOR_PALOALTOCORTEX_WINDOWS_SCRIPT_ID                     |               | Id of the OpenAEV Palo Alto Cortex Windows script                                                                                                                     |
+| executor.paloaltocortex.unix-script-id                        | EXECUTOR_PALOALTOCORTEX_UNIX_SCRIPT_ID                        |               | Id of the OpenAEV Palo Alto Cortex Unix script                                                                                                                        |
+
+### Checks
+
+Once enabled, you should see Palo Alto Cortex available in your `Install agents` section
+
+![Palo Alto Cortex available agent](../assets/paloaltocortex-agents.png)
+
+Also, the assets and the asset groups in the selected groups should now be available in the endpoints and asset
+groups sections in OpenAEV:
+
+![Palo Alto Cortex Endpoints](../assets/paloaltocortex-endpoints.png)
+
+NB : An Asset can only have one Palo Alto Cortex agent installed due to the uniqueness of the MAC address parameters. If you
+try to install again a Palo Alto Cortex agent on a platform, it will overwrite the actual one and you will always see one
+Endpoint on the OpenAEV endpoint page.
+
+!!! success "Installation done"
+
+    You are now ready to leverage your Palo Alto Cortex platform to run OpenAEV payloads!
 
 ---
 <a id="sentinelone-agent"></a>
@@ -325,7 +412,7 @@ of the scripts can be changed if necessary, the ids will be put in the OpenAEV c
 
 Upload the following script (encoded for Unix):
 
-[Download](../assets/openaev_subprocessor_unix.sh)
+[Download](../assets/sentinelone_subprocessor_unix.sh)
 
 Put the following Input schema:
 
@@ -336,7 +423,7 @@ Put the following Input schema:
 
 Upload the following script (encoded for Windows):
 
-[Download](../assets/openaev_subprocessor_windows.ps1)
+[Download](../assets/sentinelone_subprocessor_windows.ps1)
 
 Put the following Input schema:
 
@@ -357,7 +444,7 @@ To create a wrapper (account/site/group), go to `Settings` > `Accounts/Sites`.
 
     Please note that the SentinelOne API key created in "Settings/Users/Service Users" should have the following minimum role: “IR Team”. The API key and the scripts must be created for and with the same user and the required account/site.
 
-To use the SentinelOne executor, just fill the following configuration.
+To use the SentinelOne executor, just fill the following configuration in the Integrations (Executors) tab from OpenAEV menu.
 
 | Parameter                                                  | Environment variable                                       | Default value | Description                                                                                                                                           |
 |:-----------------------------------------------------------|:-----------------------------------------------------------|:--------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
