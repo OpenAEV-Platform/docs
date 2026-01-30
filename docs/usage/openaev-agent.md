@@ -115,6 +115,15 @@ If any of these requirements are not met, installation **will fail or behave unp
 
 * Antivirus exclusions are mandatory and must apply **only** to the `runtimes` directory
 
+
+!!! note
+
+    Microsoft Defender (Windows)
+    Since late January 2026, Microsoft Defender may detect the OpenAEV Agent binary itself using static signatures.
+    In this case, excluding only the `runtimes` folder may not be sufficient.
+    If issues occur (agent blocked, quarantined, or alerts), additional Defender exclusions such as the full agent folder
+    or the agent process may be required.
+
 #### Installation Mode
 
 *[UserSanitized] in the table below means username without special character like "\", "/",...*
