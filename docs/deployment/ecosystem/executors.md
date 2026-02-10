@@ -14,6 +14,7 @@ architectures. This table below summarizes the information about each agent.
 | **Tanium Agent**                   | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |                              
 | **Crowdstrike Falcon Agent**       | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |                              
 | **SentinelOne Agent**              | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |
+| **Palo Alto Cortex Agent**         | Under license | As a system service                               | Executable        | An admin background process            | As a system admin                              | No, always the same agent                        |
 | **Caldera Agent**                  | Open source   | As a user session                                 | Script            | An admin background process            | As a user admin                                | Yes, depending on the user                       |                      
 
 ## OpenAEV Agent
