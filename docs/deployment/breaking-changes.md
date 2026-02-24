@@ -21,11 +21,11 @@ This table regroups all the breaking changes introduced, with the corresponding 
 
 #### Scenario Generation from OpenCTI Security Coverage
 
-Starting from OpenAEV 2.2.0, the interconnection between OCTI and OAEV is only supported with **OCTI 7.0**.
+Starting from OpenAEV 2.2.0, the interconnection between OpenCTI and OpenAEV is only supported with **OpenCTI V7**.
 
-Previous versions of OCTI are no longer compatible due to API and interconnection changes introduced in OCTI 7.0.
+Previous versions of OpenCTI are no longer compatible due to API and interconnection changes introduced in OpenCTI V7.
 
-Please make sure to upgrade OCTI before or at the same time as OpenAEV to avoid service disruption.
+Please make sure to upgrade OpenCTI before or at the same time as OpenAEV to avoid service disruption.
 
 For more details, see [this migration guide](breaking-changes/2.2.0-opencti-security-coverage.md)
 
