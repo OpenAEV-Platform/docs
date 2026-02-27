@@ -38,18 +38,36 @@ manual [installation packages](https://github.com/OpenAEV-Platform/openaev/relea
 
 OpenAEV can be deployed using the *docker compose* command.
 
+!!! tip "Podman as an alternative"
+
+    [Podman](https://podman.io/) is a drop-in replacement for Docker that does not require a daemon and can run containers rootless. Most `docker` and `docker compose` commands translate directly to `podman` and `podman compose` equivalents. If you prefer Podman or face [Docker Desktop licensing constraints](https://docs.docker.com/subscription/desktop-license/), you can substitute `podman` wherever `docker` is used in this guide.
+
 ### Pre-requisites
 
 **:material-linux:{ .middle } Linux**
 
-```bash
-sudo apt install docker-compose
-```
+=== "Docker"
+
+    ```bash
+    sudo apt install docker-compose
+    ```
+
+=== "Podman"
+
+    ```bash
+    sudo apt install podman podman-compose
+    ```
 
 **:material-microsoft-windows:{ .middle } Windows and MacOS**
 
-Just download the appropriate [Docker for Desktop](https://www.docker.com/products/docker-desktop) version for your
-operating system.
+=== "Docker"
+
+    Download the appropriate [Docker Desktop](https://www.docker.com/products/docker-desktop) version for your
+    operating system.
+
+=== "Podman"
+
+    Download [Podman Desktop](https://podman-desktop.io/) for your operating system. Podman Desktop provides a graphical interface and manages the Podman machine automatically.
 
 ### Clone the repository
 
@@ -79,6 +97,10 @@ sudo systemctl start docker.service
 # Run docker compose in detached
 docker compose up -d
 ```
+
+!!! tip "Using Podman"
+
+    If you are using Podman, replace `docker compose` with `podman compose` and skip the `systemctl start docker.service` step (Podman does not require a daemon).
 
 !!! success "Installation done"
 
