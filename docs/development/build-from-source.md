@@ -43,6 +43,10 @@ cp ./openaev-api/src/main/resources/application.properties ./openaev-api/src/mai
 Preconfigured containers for all the needed support containers (PostgreSQL, MinIO, RabbitMQ, Elasticsearch...)
 can be found as a docker compose file in `./openaev/openaev-dev`.
 
+!!! tip "Using Podman"
+
+    If you use [Podman](https://podman.io/) instead of Docker, replace `docker compose` with `podman compose` in the commands below. All compose files are fully compatible with Podman. See the [Ubuntu prerequisites](environment-ubuntu.md) for installation instructions.
+
 Create a file a this location: `./openaev/openaev-dev/.env` and populate it with a minimal set of keys:
 ```shell
 POSTGRES_USER=openaev	
