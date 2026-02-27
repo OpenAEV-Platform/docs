@@ -215,7 +215,5 @@ nav:
     - Collectors: development/collectors.md
     - Injectors: development/injectors.md
     - REST API: development/api-usage.md
+    - Design System: development/design-system.md
     - Best Practices: development/translations.md
-
-
-
