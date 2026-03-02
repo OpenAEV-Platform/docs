@@ -23,15 +23,19 @@ implemented.
 
 #### Scenario Generation from OpenCTI Security Coverage
 
-Starting from OpenAEV 2.2.0, the interconnection between OpenCTI and OpenAEV requires matching major versions:
+In **OpenAEV 2.2.0**, the interconnection between OpenCTI and OpenAEV requires matching major versions:
 
-- **OpenAEV 2.2.0** and above only works with **OpenCTI V7**
-- **OpenCTI V7** only works with **OpenAEV 2.2.0** and above
+- **OpenAEV 2.2.0** only works with **OpenCTI V7**
+- **OpenCTI V7** only works with **OpenAEV 2.2.0**
 
-Previous versions of OpenCTI are no longer compatible with OpenAEV 2.2.0+, and conversely, OpenCTI V7 is not compatible
-with earlier versions of OpenAEV.
+Due to API and interconnection changes introduced in OpenCTI V7, previous versions of OpenCTI are not compatible
+with OpenAEV 2.2.0, and conversely, OpenCTI V7 is not compatible with earlier versions of OpenAEV.
 
-Please make sure to upgrade both OpenCTI and OpenAEV simultaneously to avoid service disruption.
+!!! success "Resolved in OpenAEV 2.2.1"
+
+    Backwards compatibility with older OpenCTI versions has been restored starting from **OpenAEV 2.2.1**. This breaking change only affects **OpenAEV 2.2.0**.
+
+If you are upgrading to OpenAEV 2.2.0, please make sure to upgrade both OpenCTI and OpenAEV simultaneously to avoid service disruption.
 
 For more details, see [this migration guide](breaking-changes/2.2.0-opencti-security-coverage.md)
 
