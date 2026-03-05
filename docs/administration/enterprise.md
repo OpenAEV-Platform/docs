@@ -58,7 +58,9 @@ according to the [OpenAEV architecture](../deployment/platform/overview.md#archi
 ### Palo Alto Cortex Agent
 
 The Palo Alto Cortex Agent can be leveraged to execute implants as detached processes that will then execute payloads
-according to the [OpenAEV architecture](../deployment/platform/overview.md#architecture)
+according to the [OpenAEV architecture](../deployment/platform/overview.md#architecture).
+
+On Windows, because Palo Alto Cortex whitelists its own process tree, OpenAEV creates a scheduled task to detach the process that will execute the payloads.
 
 ## Remediations in CVES
 

@@ -299,6 +299,8 @@ Endpoint on the OpenAEV endpoint page.
 The Palo Alto Cortex agent can be leveraged to execute implants as detached processes that will then execute payloads
 according to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/overview).
 
+On Windows, because Palo Alto Cortex whitelists its own process tree, OpenAEV creates a scheduled task to detach the process that will execute the payloads. 
+
 The implants will be downloaded to these folders on the different assets:
 
 * On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
@@ -311,11 +313,11 @@ This ensures that the implants are unique and will be deleted on assets' restart
 
 #### Upload OpenAEV scripts
 
-First of all, you need to create one custom script for Unix, covering both Linux and MacOS systems.
-For Windows, we use the existing Palo Alto script named `execute_commands`.
+First of all, you need to create one custom script for Unix, covering both Linux and MacOS systems and another one for Windows.
 
-To create it, go to `Incident Response` > `Action Center` > `Agent Script Library` > `+ New Script`. The names
+To create these scripts, go to `Investigation & responses` > `Action Center` > `Agent Script Library` > `+ New Script`. The names
 of the scripts can be changed if necessary, the ids will be put in the OpenAEV configuration.
+To get the scripts IDs, it may be necessary to add the Script UID column to the scripts list view.
 
 *Unix Script*
 
@@ -325,25 +327,29 @@ Upload the following Python script:
 
 Put the following Input schema:
 
-![Palo Alto Cortex unix script1](../assets/paloaltocortex-unix-script.png)
+![Palo Alto Cortex unix script1](../assets/paloaltocortex-unix-script-general.png)
+![Palo Alto Cortex unix script2](../assets/paloaltocortex-unix-script-inputs-outputs.png)
 
 *Windows script*
 
-Existing Palo Alto script named `execute_commands`.
+Upload the following Python script:
 
-Once created, your Remote Ops scripts should have something like this:
+[Download](../assets/paloaltocortex_subprocessor_windows.py)
 
-![Palo Alto Cortex RTR script](../assets/paloaltocortex-scripts.png)
+Put the following Input schema:
+
+![Palo Alto Cortex windows script1](../assets/paloaltocortex-windows-script-general.png)
+![Palo Alto Cortex windows script2](../assets/paloaltocortex-windows-script-inputs-outputs.png)
 
 #### Create a group with your targeted assets
 
-To create a group, go to `Endpoints` > `Endpoint Groups`.
+To create a group, go to `Inventory` > `Endpoints` > `Groups`.
 
 ### Configure the OpenAEV platform
 
 !!! warning "Palo Alto Cortex API Key"
 
-    Please note that the Palo Alto Cortex API key created in "Settings/API Keys" should have the following minimum role: “Instance Administrator” and security level: "Standard".
+    Please note that the Palo Alto Cortex API key created in "Settings/Configurations/API Keys" should have the following minimum role: “Instance Administrator” and security level: "Standard".
 
 To use the Palo Alto Cortex executor, just fill the following configuration in the Integrations (Executors) tab from OpenAEV menu.
 
