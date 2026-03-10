@@ -84,6 +84,33 @@ docker compose up -d
 
     You can now navigate to [http://localhost:8080](http://localhost:8080/) and log in with the credentials filled in your configuration.
 
+### Troubleshooting
+
+#### PostgreSQL: password authentication failed
+
+**Symptom:** The platform fails to start with the error `password authentication failed for user "admin"` (or any custom username).
+
+**Cause:** PostgreSQL initializes the database user and password only during the first startup. If you change `POSTGRES_USER` or `POSTGRES_PASSWORD` in your `.env` file after the database volume has already been created, PostgreSQL ignores the new values.
+
+**Solution:**
+
+1. Stop all containers:
+    ```bash
+    docker compose down
+    ```
+2. Remove the PostgreSQL data volume:
+    ```bash
+    docker volume rm docker_pgsqldata
+    ```
+3. Restart the stack:
+    ```bash
+    docker compose up -d
+    ```
+
+!!! warning "Data loss"
+
+    Removing the PostgreSQL volume deletes all existing data. Only use this on a fresh or non-production deployment.
+
 ## Manual installation
 
 This section provides instructions to install and run a pre-built OpenAEV server with its dependencies. Note that this
