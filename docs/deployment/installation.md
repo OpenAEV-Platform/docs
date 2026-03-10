@@ -88,28 +88,25 @@ docker compose up -d
 
 #### PostgreSQL: password authentication failed
 
-**Symptom:** The platform fails to start with the error `password authentication failed for user "admin"` (or any custom username).
 
-**Cause:** PostgreSQL initializes the database user and password only during the first startup. If you change `POSTGRES_USER` or `POSTGRES_PASSWORD` in your `.env` file after the database volume has already been created, PostgreSQL ignores the new values.
+This error occurs when the PostgreSQL container cannot authenticate with the credentials provided in your `.env` file.
 
-**Solution:**
+**Common causes:**
 
-1. Stop all containers:
-    ```bash
-    docker compose down
-    ```
-2. Remove the PostgreSQL data volume:
-    ```bash
-    docker volume rm docker_pgsqldata
-    ```
-3. Restart the stack:
-    ```bash
-    docker compose up -d
-    ```
+| Cause | Solution |
+|:------|:---------|
+| `POSTGRES_USER` set to a reserved name (e.g. `admin`) | Use a different username (e.g. `openaev`) |
+| Mismatch between `POSTGRES_USER`/`POSTGRES_PASSWORD` and `SPRING_DATASOURCE_USERNAME`/`SPRING_DATASOURCE_PASSWORD` | Ensure both sets of credentials match |
 
-!!! warning "Data loss"
+#### Container fails to start
 
-    Removing the PostgreSQL volume deletes all existing data. Only use this on a fresh or non-production deployment.
+If the OpenAEV container exits immediately after starting:
+
+1. Check the logs: `docker compose logs openaev`
+2. Verify all required environment variables are set in your `.env` file
+3. Ensure all dependency containers (PostgreSQL, ElasticSearch, RabbitMQ, MinIO) are healthy:
+   ```bash
+   docker compose ps
 
 ## Manual installation
 
