@@ -224,6 +224,15 @@ The installation creates two firewall rules:
 
 ---
 
+## Proxy Configuration
+
+To use a proxy with the OpenAEV Agent, you can set the following environment variables on your machine before installing the agent:
+**HTTP_PROXY** and **HTTPS_PROXY**
+
+Verify that your proxy is correctly configured and communicate well with your OpenAEV Agent installed.
+
+---
+
 ## Features
 
 The main features of the OpenAEV Agent include:
