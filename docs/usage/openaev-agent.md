@@ -226,8 +226,13 @@ The installation creates two firewall rules:
 
 ## Proxy Configuration
 
-To use a proxy with the OpenAEV Agent, you can set the following environment variables on your machine before installing the agent:
-**HTTP_PROXY** and **HTTPS_PROXY**
+To use a proxy with the OpenAEV Agent, define both `HTTP_PROXY` and `HTTPS_PROXY` **before running the installer**.
+
+You can configure them in either of the following ways:
+- **Machine-wide (persistent):** set them as system environment variables so they are available globally.
+- **Session-only (temporary):** set/export them in the same terminal session immediately before executing the installation script.
+
+If the agent is installed as a service, make sure these variables are also available to the service account.
 
 Verify that your proxy is correctly configured and communicate well with your OpenAEV Agent installed.
 
