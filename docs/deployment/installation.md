@@ -107,6 +107,7 @@ If the OpenAEV container exits immediately after starting:
 3. Ensure all dependency containers (PostgreSQL, ElasticSearch, RabbitMQ, MinIO) are healthy:
    ```bash
    docker compose ps
+   ```
 
 ## Manual installation
 
