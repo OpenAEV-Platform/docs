@@ -15,7 +15,7 @@
         <link rel="prev" href="../inject-overview/">
       
       
-        <link rel="next" href="../inject-result-list/">
+        <link rel="next" href="../inject-tests/">
       
       
         
@@ -116,7 +116,7 @@
             
             
 Breaking Changes in OpenAEV 2.2.0 — Resolved in 2.2.1
-<a href="/2.1.X/deployment/breaking-changes/2.2.0-opencti-security-coverage/">
+<a href="/2.2.X/deployment/breaking-changes/2.2.0-opencti-security-coverage/">
   <strong>Click here to go to the migration guide.</strong>
 </a>
 
@@ -2116,10 +2116,10 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#integrations-with-agents-and-cyberranges" class="md-nav__link">
+  <a href="#technical-injects-via-the-openaev-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Integrations with Agents and CyberRanges
+        Technical Injects via the OpenAEV Agent
       
     </span>
   </a>
@@ -2127,197 +2127,13 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#nmap" class="md-nav__link">
+  <a href="#agentless-injectors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nmap
+        Agentless Injectors
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Nmap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behavior
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Behavior">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap-fin-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nmap - FIN Scan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nmap-syn-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nmap - SYN Scan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nmap-tcp-connect-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nmap - TCP Connect Scan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-selection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target Selection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resources
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nuclei" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nuclei
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nuclei">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#behavior_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behavior
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Behavior">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#supported-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported Contracts
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-selection_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target Selection
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Target Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#if-target-type-is-assets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If target type is Assets:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#if-target-type-is-manual" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If target type is Manual:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Results
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resources
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2325,6 +2141,90 @@ You're not viewing the latest version.
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inject-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inject tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inject-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inject status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inject-chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaining and transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -3060,6 +2960,34 @@ You're not viewing the latest version.
   
   
   
+    <li class="md-nav__item">
+      <a href="../expectations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -3074,10 +3002,10 @@ You're not viewing the latest version.
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4_7">
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4_8">
         
           
-          <label class="md-nav__link" for="__nav_3_4_7" id="__nav_3_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4_8" id="__nav_3_4_8_label" tabindex="0">
             
   
   
@@ -3095,8 +3023,8 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4852,10 +4780,10 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#integrations-with-agents-and-cyberranges" class="md-nav__link">
+  <a href="#technical-injects-via-the-openaev-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Integrations with Agents and CyberRanges
+        Technical Injects via the OpenAEV Agent
       
     </span>
   </a>
@@ -4863,197 +4791,13 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#nmap" class="md-nav__link">
+  <a href="#agentless-injectors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nmap
+        Agentless Injectors
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Nmap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behavior
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Behavior">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap-fin-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nmap - FIN Scan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nmap-syn-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nmap - SYN Scan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nmap-tcp-connect-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nmap - TCP Connect Scan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-selection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target Selection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resources
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nuclei" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nuclei
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nuclei">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#behavior_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behavior
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Behavior">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#supported-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported Contracts
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-selection_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target Selection
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Target Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#if-target-type-is-assets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If target type is Assets:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#if-target-type-is-manual" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If target type is Manual:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Results
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resources
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5229,120 +4973,15 @@ platform (e.g. API call to an EDR). These injects enable the platform to communi
 information, or trigger specific actions via HTTP protocols.</p>
 <p>HTTP requests GET, POST, and PUT, can be sent. The corresponding injects are named <code>HTTP Request - \&lt;request type&gt;</code>.</p>
 <p><a id="integration-section"></a></p>
-<h2 id="integrations-with-agents-and-cyberranges">Integrations with Agents and CyberRanges</h2>
-<p>Injects executed on remote systems are facilitated by Injectors like <a href="../inject-caldera/">Caldera</a> or Airbus CyberRange.
-These actions simulate real-world attack techniques, allowing administrators to gauge the effectiveness of their
-security posture in response to various technical actions attackers may take.</p>
-<p>There are over 1,700 such injects covering all the TTPs in the MITRE ATT&amp;CK matrix.</p>
-<h2 id="nmap">Nmap</h2>
-<h3 id="behavior">Behavior</h3>
-<p>The injector enables new inject contracts, supporting the following Nmap scan types:</p>
-<h4 id="nmap-fin-scan">Nmap - FIN Scan</h4>
-<p>Command executed:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nmap<span class="w"> </span>-Pn<span class="w"> </span>-sF
-</span></code></pre></div>
-<h4 id="nmap-syn-scan">Nmap - SYN Scan</h4>
-<p>Command executed:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nmap<span class="w"> </span>-Pn<span class="w"> </span>-sS
-</span></code></pre></div>
-<h4 id="nmap-tcp-connect-scan">Nmap - TCP Connect Scan</h4>
-<p>Command executed:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nmap<span class="w"> </span>-Pn<span class="w"> </span>-sT
-</span></code></pre></div>
-<h4 id="target-selection">Target Selection</h4>
-<p>The targets vary based on the provided options:</p>
-<p>If type of targets is Assets:</p>
-<table>
-<thead>
-<tr>
-<th>Targeted property</th>
-<th>Asset property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Seen IP</td>
-<td>Seen IP address</td>
-</tr>
-<tr>
-<td>Local IP (first)</td>
-<td>IP Addresses (first)</td>
-</tr>
-<tr>
-<td>Hostname</td>
-<td>Hostname</td>
-</tr>
-</tbody>
-</table>
-<p>If type of targets is Manual:</p>
-<ul>
-<li>Hostnames or IP addresses are provided directly as comma-separated values.</li>
-</ul>
-<h3 id="resources">Resources</h3>
-<ul>
-<li>Official Nmap Documentation: https://nmap.org/docs.html</li>
-<li>Options Explanation:</li>
-<li>-Pn: Host Discovery</li>
-<li>-sS: SYN Scan</li>
-<li>-sT: TCP Connect Scan</li>
-<li>-sF: FIN Scan</li>
-</ul>
-<h2 id="nuclei">Nuclei</h2>
-<h3 id="behavior_1">Behavior</h3>
-<p>The Nuclei injector supports contract-based scans by dynamically constructing and executing Nuclei commands based on provided tags or templates.</p>
-<h4 id="supported-contracts">Supported Contracts</h4>
-<p>The following scan types are supported via <code>-tags</code>:</p>
-<ul>
-<li>Cloud</li>
-<li>Misconfiguration</li>
-<li>Exposure</li>
-<li>Panel</li>
-<li>XSS</li>
-<li>WordPress</li>
-<li>HTTP</li>
-</ul>
-<p>The CVE scan uses the <code>-tags cve</code> argument and enforces JSON output.</p>
-<p>The Template scan accepts a manual template via <code>-t &lt;template&gt;</code> or <code>template_path</code>.</p>
-<h4 id="target-selection_1">Target Selection</h4>
-<p>Targets are selected based on the <code>target_selector</code> field.</p>
-<h5 id="if-target-type-is-assets">If target type is <strong>Assets</strong>:</h5>
-<table>
-<thead>
-<tr>
-<th>Selected Property</th>
-<th>Uses Asset Field</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Seen IP</td>
-<td>endpoint_seen_ip</td>
-</tr>
-<tr>
-<td>Local IP</td>
-<td>First IP from endpoint_ips</td>
-</tr>
-<tr>
-<td>Hostname</td>
-<td>endpoint_hostname</td>
-</tr>
-</tbody>
-</table>
-<h5 id="if-target-type-is-manual">If target type is <strong>Manual</strong>:</h5>
-<p>Hostnames or IP addresses are provided directly as comma-separated values.</p>
-<h4 id="results">Results</h4>
-<p>Scan results are categorized into:</p>
-<ul>
-<li><strong>CVEs</strong> (based on template classifications)</li>
-<li><strong>Other vulnerabilities</strong> (general issues found)</li>
-</ul>
-<p>If no vulnerabilities are detected, the injector will clearly indicate this with a <strong>"Nothing Found"</strong> message.</p>
-<h3 id="resources_1">Resources</h3>
-<ul>
-<li><a href="https://github.com/projectdiscovery/nuclei">Nuclei Documentation</a></li>
-<li><a href="https://github.com/projectdiscovery/nuclei-templates">Official Nuclei Templates</a></li>
-<li>http://testphp.vulnweb.com/ is a safe, intentionally vulnerable target provided by Acunetix for security testing purposes</li>
-</ul>
+<h2 id="technical-injects-via-the-openaev-agent">Technical Injects via the OpenAEV Agent</h2>
+<p>Technical Injects execute commands and Payloads directly on target Endpoints through the
+<a href="../openaev-agent/">OpenAEV Agent</a>. They simulate real-world attack techniques, allowing you to gauge the effectiveness
+of your security posture against the actions an attacker would take.</p>
+<h2 id="agentless-injectors">Agentless Injectors</h2>
+<p>Some Injects do not require an Agent on the target. Injectors like Nmap or Nuclei run scans and attacks remotely,
+targeting endpoints by IP or hostname without any installed agent.</p>
+<p>The full list of available Injectors (agent-based and agentless) is maintained in the
+<a href="https://github.com/OpenAEV-Platform/injectors">OpenAEV Injectors repository</a>.</p>
 
 
 
@@ -5365,7 +5004,7 @@ security posture in response to various technical actions attackers may take.</p
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 26, 2026 09:38:12 UTC"><span class="timeago" datetime="2026-02-26T09:38:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 26, 2026 09:38:12 UTC">2026-02-26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 21, 2026 06:06:52 UTC"><span class="timeago" datetime="2026-04-21T06:06:52+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 21, 2026 06:06:52 UTC">2026-04-21</span>
   </span>
 
     
@@ -5393,9 +5032,9 @@ security posture in response to various technical actions attackers may take.</p
     
     <nav>
       
-        <a href="https://github.com/apps/copilot-swe-agent" class="md-author" title="@Copilot">
+        <a href="https://github.com/RomuDeuxfois" class="md-author" title="@RomuDeuxfois">
           
-          <img src="https://avatars.githubusercontent.com/in/1143301?v=4&amp;size=72" alt="Copilot">
+          <img src="https://avatars.githubusercontent.com/u/53513584?v=4&amp;size=72" alt="RomuDeuxfois">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
@@ -5403,9 +5042,9 @@ security posture in response to various technical actions attackers may take.</p
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&amp;size=72" alt="web-flow">
         </a>
       
-        <a href="https://github.com/RomuDeuxfois" class="md-author" title="@RomuDeuxfois">
+        <a href="https://github.com/apps/copilot-swe-agent" class="md-author" title="@Copilot">
           
-          <img src="https://avatars.githubusercontent.com/u/53513584?v=4&amp;size=72" alt="RomuDeuxfois">
+          <img src="https://avatars.githubusercontent.com/in/1143301?v=4&amp;size=72" alt="Copilot">
         </a>
       
       
@@ -5456,13 +5095,13 @@ security posture in response to various technical actions attackers may take.</p
         
         
           
-          <a href="../inject-result-list/" class="md-footer__link md-footer__link--next" aria-label="Next: Search and Filter">
+          <a href="../inject-tests/" class="md-footer__link md-footer__link--next" aria-label="Next: Inject tests">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Search and Filter
+                Inject tests
               </div>
             </div>
             <div class="md-footer__button md-icon">
