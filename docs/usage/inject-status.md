@@ -46,7 +46,7 @@ Every execution step reports a **trace status**, grouped into three categories.
 | `SUCCESS`                   | Command executed successfully | |
 | `SUCCESS WITH CLEANUP FAIL` | Main command succeeded, but cleanup failed | The main command executed successfully, but the cleanup step failed. Check cleanup prerequisites and logs on the target. |
 | `WARNING`                   | Command completed with stderr output | The command completed but produced stderr output. Review stderr for potential issues. |
-| `ACCESS DENIED`             | Command blocked due to insufficient privileges | The command was denied due to insufficient privileges. This confirms the security control is working: the agent attempted execution but was blocked. |
+| `ACCESS DENIED`             | Command blocked due to insufficient privileges | The command was denied due to insufficient privileges. The agent attempted execution but was blocked |
 
 ### Error statuses
 
