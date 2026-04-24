@@ -50,7 +50,7 @@ Every execution step reports a **trace status**. Below is the complete list of a
 | Status                      | Description | Details |
 |-----------------------------|-------------|---------|
 | `EXECUTED`                   | Command executed to completion without system errors | *Note: This only means the command ran, not that it bypassed defenses* |
-| `EXECUTED WITH CLEANUP FAIL` | | Main command succeeded, but cleanup failed | Check if the action locked the file or if permissions changed during execution |
+| `EXECUTED WITH CLEANUP FAIL` | Main command succeeded, but cleanup failed | Check if the action locked the file or if permissions changed during execution |
 | `WARNING`                   | Command completed but produced stderr output | Review stderr logs for potential non-blocking issues |
 | `ACCESS DENIED`             | Command denied by the OS due to insufficient privileges | Check if the agent is running with the required rights (e.g., Admin/Root) |
 
@@ -60,7 +60,7 @@ Every execution step reports a **trace status**. Below is the complete list of a
 |------------------------------|-------------|---------|
 | `ERROR`                      | General, unclassified execution failure | Check the agent logs for detailed stack traces |
 | `COMMAND NOT FOUND`          | Executable or binary missing on the target system | Ensure dependencies (e.g., `curl`, `powershell`) are installed in the `PATH` |
-| `COMMAND CANNOT BE EXECUTED` | Command exists but cannot run | Check file execute permissions (`chmod +x`) or architecture compatibility. |
+| `COMMAND CANNOT BE EXECUTED` | Command exists but cannot run | Check file execute permissions (`chmod +x`) or architecture compatibility |
 | `PREREQUISITE FAILED`        | A prerequisite check failed before the main command | Review prerequisite dependencies and ensure they are met on the target |
 | `INVALID USAGE`              | Incorrect arguments or syntax | The command was invoked with incorrect arguments or syntax Verify the inject parameters and command |
 | `TIMEOUT`                    | Execution exceeded time threshold | The agent did not complete execution within the allowed time threshold. Consider investigating target performance |
@@ -70,7 +70,7 @@ Every execution step reports a **trace status**. Below is the complete list of a
 
 | Status            | Description | Details |
 |-------------------|-------------|---------|
-| `AGENT INACTIVE`  | Agent was not active during Inject execution | This agent was not active during the inject execution. Check your asset connectivity. |
+| `AGENT INACTIVE`  | Agent was not active during Inject execution | This agent was not active during the inject execution. Check your asset connectivity |
 | `ASSET AGENTLESS` | Asset has no Agent installed | Install an OpenAEV agent on the target asset |
 | `INFO`            | Informational trace (e.g., Agent spawn notification) | |
 
@@ -141,16 +141,16 @@ detection was identified on an external platform, click the alert name to open i
 
 When automated result retrieval is not possible (e.g., non-technical Injects), record results manually:
 
-1. Open the Inject result page.
-2. Click the **shield** icon labeled **Add a result**.
-3. Fill in the result form and save.
+1. Open the Inject result page
+2. Click the **shield** icon labeled **Add a result**
+3. Fill in the result form and save
 
 ![Adding a manual result](assets/inject-expectation-manual-result-1.png)
 ![Adding a manual result popup](assets/inject-expectation-manual-result-2.png)
 
 ## Go further
 
-- Define [Expectations](expectations/overview.md) to set success criteria for your Injects.
-- Explore [Findings](findings.md) to see what was detected during execution.
-- Review [Inject results](inject-result.md) for a full breakdown of your security posture against a test.
+- Define [Expectations](expectations/overview.md) to set success criteria for your Injects
+- Explore [Findings](findings.md) to see what was detected during execution
+- Review [Inject results](inject-result.md) for a full breakdown of your security posture against a test
 
