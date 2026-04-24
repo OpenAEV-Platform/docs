@@ -86,3 +86,9 @@ List known versions:
 ```
 $ mike list
 ```
+
+Find the source commit of the last deployed version:
+```
+$ git log gh-pages -1 --format="%s"
+```
+
