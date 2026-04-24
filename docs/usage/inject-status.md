@@ -100,14 +100,14 @@ The server evaluates all traces for a single Agent with the following priority r
 
 ### Inject status computation
 
-The server computes the Inject-level status from per-Agent COMPLETE traces, **excluding `AGENT INACTIVE` Agents**:
+The server computes the Inject-level status from per-Agent COMPLETE traces, **excluding `AGENT INACTIVE` Agents**. However, if *no* agents were active, the execution fails:
 
 | Condition | Inject status |
 |-----------|--------------|
 | All active Agents succeeded | <span style="color: #4caf50">**EXECUTED**</span> |
 | All active Agents errored | <span style="color: #f44336">**ERROR**</span> |
 | Mix of success and error | <span style="color: #ff9800">**PARTIAL**</span> |
-| No active Agents | <span style="color: #f44336">**ERROR**</span> |
+| No active Agents | <span style="color: #f44336">**ERROR**</span> *(Execution cannot succeed without at least one active agent)* |
 
 ## In practice
 
