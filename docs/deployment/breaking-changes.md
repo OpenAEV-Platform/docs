@@ -14,7 +14,7 @@ implemented.
 | [OpenCTI / OpenAEV compatibility](#octi-oaev-compatibility) | -             | 2.2.0      |
 | [OpenAEV encryption of secret](#openaev-encryption)         | -             | 2.1.0      |
 | [OpenAEV renaming](#openaev-renaming)                       | 1.18.20       | 2.0.0      |
-| [OpenAEV CSRF](#openaev-csrf)                               | -             | 2.3.3      |
+| [OpenAEV CSRF](#openaev-csrf)                               | -             | 2.3.4      |
 
 ## OpenAEV 2.2.0
 
@@ -75,7 +75,7 @@ usual.
 
 For more details, see [this migration guide](breaking-changes/2.0.0-openaev-renaming.md)
 
-## OpenAEV 2.3.3
+## OpenAEV 2.3.4
 
 ### Introduction
 
@@ -83,7 +83,7 @@ For more details, see [this migration guide](breaking-changes/2.0.0-openaev-rena
 
 #### OpenAEV CSRF protection for frontend API calls
 
-Starting with **OpenAEV 2.3.3**, frontend-initiated API calls must include a valid CSRF token.  
-To prevent API authentication and connection issues, make sure all ecosystem components are upgraded to versions compatible with OpenAEV 2.3.3.
+Starting with **OpenAEV 2.3.4**, frontend-initiated API calls must include a valid CSRF token.  
+To prevent API authentication and connection issues, make sure all ecosystem components are upgraded to versions compatible with OpenAEV 2.3.4.
 
-For more details, see [this migration guide](breaking-changes/2.3.3-csrf-token-enforcement.md)
+For more details, see [this migration guide](breaking-changes/2.3.4-csrf-token-enforcement.md)
