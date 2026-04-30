@@ -42,7 +42,7 @@ To create a new action, follow these steps:
 2. In the **General Information** tab, fill in the required details about the action.   
    2.1. Assign a name to your new action and provide additional general details such as description, attack patterns
    and tags.
-   ![Threat Arsenal Actiongeneral view](assets/payload-general-view.png)
+   ![Threat Arsenal Actiongeneral view](assets/threat-arsenal-general-view.png)
 3. In the **Commands** tab:   
    3.1. Choose a **threat arsenal actiontype** based on your needs:
     - **Command Line**: Executes a command using an executor (e.g., PowerShell, Bash, etc.).
@@ -52,12 +52,12 @@ To create a new action, follow these steps:
 
    3.2. Specify the platform and provide additional command details, such as arguments and prerequisites.  
    3.3. Specify a **cleanup executor and cleanup command** to remove any remnants from execution on the asset.  
-   ![Threat Arsenal Actioncommand view](assets/payload-command-view.png)
+   ![Threat Arsenal Actioncommand view](assets/threat-arsenal-command-view.png)
 
 4. In the **Output Parsers** tab (optional):  
    4.1. Add **[Output Parsers](#output-parsers)** to process the raw output of your execution.  
    4.2. Specify whether to generate **[Findings](../findings.md)** from the output.  
-   ![Threat Arsenal Actionoutput parser view](assets/payload-output-parser-view.png)
+   ![Threat Arsenal Actionoutput parser view](assets/threat-arsenal-output-parser-view.png)
 
 5. In the **Remediation** tab (optional and EE):  
    This section allows threat arsenal actioncreators to define detection rules to identify threat arsenal actions that were not
@@ -66,7 +66,7 @@ To create a new action, follow these steps:
    
     5.1 Use Ariane, allows threat arsenal actioncreators to generate rules using AI, for threat arsenal actionof type Command or DnsResolution and for the collector Splunk or Crowdstrike
 
-![Threat Arsenal Actionremediation view](assets/payload-detection-remediation-view.png)
+![Threat Arsenal Actionremediation view](assets/threat-arsenal-detection-remediation-view.png)
 
 ### Status of detection remediation rules
 
@@ -274,11 +274,11 @@ The finding generated would be:
 If you want to combine multiple groups in a field, you have to concatenate them like `$n$m` (placing the group
 references next to each other). The final value of the field will be a composition of these groups.
 
-### Threat Arsenal Actionexecution workflow
+### Threat Arsenal Action execution workflow
 
 ![threat arsenal actionexecution workflow](assets/payload-execution-workflow.png)
 
-## Use a Threat Arsenal
+## Use a Threat Arsenal Action
 
 After creation, a new inject type will automatically appear in the inject types list if the implant you're using
 supports it (the OpenAEV Implant does).
@@ -286,14 +286,40 @@ supports it (the OpenAEV Implant does).
 ![Threat Arsenal Actioncreation dns](assets/payload-creation-dns.png)
 ![Threat Arsenal Actionto inject](assets/payload-to-inject.png)
 
-## Import / Export threat arsenal actions
+## Update Threat Arsenal Action
+
+As described in the [Threat Arsenal actions — List View](#threat-arsenal-actions-list-view) section, 
+threat arsenal actions can be created by users, inserted through injectors, or inserted through collectors.
+
+Depending on the source of the action, the update process may differ:
+
+- **User-created actions** — You can update them directly from the Threat Arsenal view by clicking on the action and modifying all its properties.
+- **Actions inserted through injectors** — You can only update the domains, attack patterns, and tags linked to the action.
+- **Actions inserted through collectors** (e.g. Atomic Red Team) — You cannot update them from the platform, as they are managed by the collector.
+
+## Delete Threat Arsenal Action
+
+The deletion process of a threat arsenal action depends on its source:
+
+- **User-created actions** — You can delete them directly from the Threat Arsenal view by clicking on the action and selecting the delete option.
+- **Actions inserted through injectors or collectors** — These actions cannot be deleted from the platform.
+
+## Import / Export Threat Arsenal Actions
 
 ### Overview
 
-OpenAEV supports importing and exporting threat arsenal actions using the [JSON:API](https://jsonapi.org/) specification. This enables
-seamless sharing of threat arsenal actions across instances or within the community.
+There are two ways to export Threat Arsenal actions:
+
+- **CSV Export**
+  You can filter or search your Threat Arsenal action list and export the current view as a CSV file. The exported file contains the same information displayed in the Threat Arsenal page. This export is available for all types of actions.
+
+- **JSON ZIP Export** — [JSON:API](https://jsonapi.org/) 
+  The JSON export is designed to be paired with the import feature — you export to reimport elsewhere. This export is only available for user-created actions, as it contains all the details of the action (including the command, arguments, output parsers, etc.) that are not editable for actions coming from injectors or collectors.
+
+OpenAEV supports importing and exporting threat arsenal actions using the [JSON:API](https://jsonapi.org/) specification. 
+This enables seamless sharing of threat arsenal actions across instances or within the community.
 
 ### Use Cases
 
-* Share complex threat arsenal actions with teammates or the community.
-* Use threat arsenal actions across dev, test, and production environments.
+- Share complex threat arsenal actions with teammates or the community.
+- Use threat arsenal actions across dev, test, and production environments.
