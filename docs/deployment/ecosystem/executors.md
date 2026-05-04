@@ -31,13 +31,6 @@ payloads on endpoints.
 The Tanium agent can be leveraged to execute implants as detached processes that will then execute payloads, according
 to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/platform/overview/).
 
-The implants will be downloaded to these folders on the different assets:
-
-* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
-* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
-
-where XXXXX will be a completely random UUID, generated for each inject that will be executed.
-This ensures that the implants are unique and will be deleted on assets' restart.
 
 ### Configure the Tanium Platform
 
@@ -129,13 +122,6 @@ Endpoints from the selected computer groups should now appear in the **OpenAEV E
 The CrowdStrike Falcon agent can be leveraged to execute implants as detached processes that will then execute payloads
 according to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/platform/overview/).
 
-The implants will be downloaded to these folders on the different assets:
-
-* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
-* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
-
-where XXXXX will be a completely random UUID, generated for each inject that will be executed.
-This ensures that the implants are unique and will be deleted on assets' restart.
 
 ### Configure the CrowdStrike Platform
 
@@ -301,13 +287,6 @@ according to the [OpenAEV architecture](https://docs.openaev.io/latest/deploymen
 
 On Windows, because Palo Alto Cortex whitelists its own process tree, OpenAEV creates a scheduled task to detach the process that will execute the payloads. 
 
-The implants will be downloaded to these folders on the different assets:
-
-* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
-* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
-
-where XXXXX will be a completely random UUID, generated for each inject that will be executed.
-This ensures that the implants are unique and will be deleted on assets' restart.
 
 ### Configure the Palo Alto Cortex Platform
 
@@ -392,13 +371,6 @@ Endpoint on the OpenAEV endpoint page.
 The SentinelOne agent can be leveraged to execute implants as detached processes that will then execute payloads
 according to the [OpenAEV architecture](https://docs.openaev.io/latest/deployment/platform/overview/).
 
-The implants will be downloaded to these folders on the different assets:
-
-* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
-* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
-
-where XXXXX will be a completely random UUID, generated for each inject that will be executed.
-This ensures that the implants are unique and will be deleted on assets' restart.
 
 !!! warning "SentinelOne"
 
@@ -585,3 +557,20 @@ Run the following commands with an administrator Powershell in order to uninstal
 `schtasks /delete /tn OpenAEVCaldera`<br/>
 `Stop-Process -Name oaev-agent-caldera`<br/>
 `rm -force -Recurse "C:\Program Files (x86)\Filigran\OAEV Caldera"`
+
+## Implant directories and cleanup
+
+For all executors (except Caldera and OpenAEV agent), implants are downloaded to the following folders on the endpoints:
+
+* On Windows assets: `C:\Program Files (x86)\Filigran\OAEV Agent\runtimes\implant-XXXXX`
+* On Linux or MacOS assets: `/opt/openaev-agent/runtimes/implant-XXXXX`
+
+where `XXXXX` is a completely random UUID, generated for each inject that will be executed.
+
+- Each implant directory is unique per inject.
+- Old implant directories are periodically cleaned up by the platform. Every `clean-implant-interval` hours (default: **8**), the platform sends a cleanup command to each endpoint agent, which removes all directories in `runtimes/` and `payloads/` that are older than **24 hours**.
+
+!!! note "OpenAEV Agent"
+
+    The OpenAEV Agent has its own built-in garbage collector with different thresholds. See the [OpenAEV Agent documentation](../../usage/openaev-agent.md) for details.
+
