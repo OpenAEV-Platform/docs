@@ -247,8 +247,8 @@ The main features of the OpenAEV Agent include:
 * Periodic job retrieval (every 30 seconds)
 * Implant lifecycle management
 * Execution cleanup and directory pruning (garbage collector running every **3 minutes**):
-    * Directories matching `runtimes/execution-*` and `payloads/execution-*` older than **20 minutes** are processed: associated processes are killed, then the directories are renamed from `execution-*` to `executed-*`.
-    * Directories matching `runtimes/executed-*` and `payloads/executed-*` older than **2 days** are permanently deleted.
+    * Directories matching `runtimes/execution-*` and `payloads/execution-*` older than **10 minutes** are processed: associated processes are killed, then the directories are renamed from `execution-*` to `executed-*`.
+    * Directories matching `runtimes/executed-*` and `payloads/executed-*` older than **10 minutes** are permanently deleted.
 * Health checks (heartbeat every 2 minutes)
 
 ---
