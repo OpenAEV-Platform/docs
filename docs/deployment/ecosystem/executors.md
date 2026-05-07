@@ -586,7 +586,7 @@ Each implant directory is unique per inject.
 The installation directory path varies depending on the agent type and installation mode. Refer to [installation mode](../../usage/openaev-agent.md#privileges-security_1) for the exact paths.
 
 ### Cleanup
-Old implant directories are periodically cleaned up by the platform. Every `clean-implant-interval` hours (default: **8**), the platform sends a cleanup command to each endpoint agent, which removes all directories in `runtimes/` and `payloads/` that are older than **24 hours**.
+Old implant directories are periodically cleaned up by the platform. At the interval defined by `clean-implant-interval` (default: **8 hours**), the platform sends a cleanup command to each endpoint agent to remove directories in `runtimes/` and `payloads/` that are older than **24 hours**.
 
 !!! note "OpenAEV Agent"
 
