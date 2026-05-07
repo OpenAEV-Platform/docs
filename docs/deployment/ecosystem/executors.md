@@ -575,18 +575,17 @@ Run the following commands with an administrator Powershell in order to uninstal
 `Stop-Process -Name oaev-agent-caldera`<br/>
 `rm -force -Recurse "C:\Program Files (x86)\Filigran\OAEV Caldera"`
 
-## Implant directories and cleanup
+## Implant Directories and Cleanup
 
-For all executors (except Caldera and OpenAEV Agent), implants are downloaded into a `runtimes/implant-XXXXX`
-subdirectory relative to the agent's installation directory, where `XXXXX` is a unique UUID generated for each inject
-execution. The installation directory varies depending on the agent type
-and [installation mode](../../usage/openaev-agent.md#privileges-security_1) for the
-exact paths.
+### Implant Directories
+For all executors (except Caldera and OpenAEV Agent), implants are downloaded into a `runtimes/implant-XXXXX` subdirectory relative to the agent's installation directory, where `XXXXX` is a unique UUID generated for each inject execution.
 
-- Each implant directory is unique per inject.
-- Old implant directories are periodically cleaned up by the platform. Every `clean-implant-interval` hours (default: *
-  *8**), the platform sends a cleanup command to each endpoint agent, which removes all directories in `runtimes/` and
-  `payloads/` that are older than **24 hours**.
+Each implant directory is unique per inject.
+
+The installation directory varies depending on the agent type and [installation mode](../../usage/openaev-agent.md#privileges-security_1) for the exact paths.
+
+### Cleanup
+Old implant directories are periodically cleaned up by the platform. Every `clean-implant-interval` hours (default: **8**), the platform sends a cleanup command to each endpoint agent, which removes all directories in `runtimes/` and `payloads/` that are older than **24 hours**.
 
 !!! note "OpenAEV Agent"
 
