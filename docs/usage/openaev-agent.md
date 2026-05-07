@@ -252,6 +252,25 @@ The main features of the OpenAEV Agent include:
 * Health checks (heartbeat every 2 minutes)
 
 ---
+### Cleanup Configuration
+
+The garbage collector thresholds can be customized in the agent's `toml.config` file:
+
+| Parameter                      | Description                                                                                              | Default value |
+|--------------------------------|----------------------------------------------------------------------------------------------------------|---------------|
+| `executing_max_time_minutes`   | Max age (in minutes) for `execution-*` directories before processes are killed and directories renamed to `executed-*` | `10`          |
+| `directory_max_time_minutes`   | Max age (in minutes) for `executed-*` directories before they are permanently deleted                     | `10`          |
+| `cleanup_interval_seconds`     | Interval (in seconds) between cleanup cycles                                                              | `180`         |
+
+Example configuration in `toml.config`:
+
+```toml
+[cleanup]
+executing_max_time_minutes = 10
+directory_max_time_minutes = 10
+cleanup_interval_seconds = 180
+```
+---
 
 ## Troubleshooting
 
