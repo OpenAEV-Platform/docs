@@ -254,7 +254,7 @@ The main features of the OpenAEV Agent include:
 ---
 ### Cleanup Configuration
 
-The garbage collector thresholds can be customized in the agent's `toml.config` file:
+The garbage collector thresholds can be customized in the agent's `openaev-agent-config.toml` file:
 
 | Parameter                      | Description                                                                                              | Default value |
 |--------------------------------|----------------------------------------------------------------------------------------------------------|---------------|
