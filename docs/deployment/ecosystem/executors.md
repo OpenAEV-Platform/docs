@@ -583,7 +583,7 @@ Implants are downloaded into a `runtimes/implant-XXXXX` subdirectory relative to
 
 Each implant directory is unique per inject.
 
-The installation directory varies depending on the agent type and installation mode. Refer to [installation mode](../../usage/openaev-agent.md#privileges-security_1) for the exact path.(../../usage/openaev-agent.md#privileges-security_1) for the exact paths.
+The installation directory path varies depending on the agent type and installation mode. Refer to [installation mode](../../usage/openaev-agent.md#privileges-security_1) for the exact path.(../../usage/openaev-agent.md#privileges-security_1) for the exact paths.
 
 ### Cleanup
 Old implant directories are periodically cleaned up by the platform. Every `clean-implant-interval` hours (default: **8**), the platform sends a cleanup command to each endpoint agent, which removes all directories in `runtimes/` and `payloads/` that are older than **24 hours**.
