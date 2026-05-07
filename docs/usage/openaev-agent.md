@@ -270,8 +270,8 @@ executing_max_time_minutes = 10
 directory_max_time_minutes = 10
 cleanup_interval_seconds = 180
 ```
----
 
+---
 ## Troubleshooting
 
 Logs are available at the following locations (see installation tables for paths):
