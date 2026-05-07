@@ -256,11 +256,11 @@ The main features of the OpenAEV Agent include:
 
 The garbage collector thresholds can be customized in the agent's `openaev-agent-config.toml` file:
 
-| Parameter                      | Description                                                                                              | Default value |
-|--------------------------------|----------------------------------------------------------------------------------------------------------|---------------|
-| `executing_max_time_minutes`   | Max age (in minutes) for `execution-*` directories before processes are killed and directories renamed to `executed-*` | `10`          |
-| `directory_max_time_minutes`   | Max age (in minutes) for `executed-*` directories before they are permanently deleted                     | `10`          |
-| `cleanup_interval_seconds`     | Interval (in seconds) between cleanup cycles                                                              | `180`         |
+| Parameter                      | Description                                                                                                                             | Default value |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| `executing_max_time_minutes`   | Maximum time (in minutes) an `execution-*` directory can exist before processes are killed and the directory is renamed to `executed-*` | `10`          |
+| `directory_max_time_minutes`   | Maximum time (in minutes) an `executed-*` directory can exist before it is permanently deleted                                          | `10`          |
+| `cleanup_interval_seconds`     | Interval (in seconds) between cleanup cycles                                                                                            | `180`         |
 
 Example configuration in `openaev-agent-config.toml`:
 
