@@ -576,9 +576,10 @@ Run the following commands with an administrator Powershell in order to uninstal
 `rm -force -Recurse "C:\Program Files (x86)\Filigran\OAEV Caldera"`
 
 ## Implant Directories and Cleanup
+For all executors (except Caldera and OpenAEV Agent) :
 
 ### Implant Directories
-For all executors (except Caldera and OpenAEV Agent), implants are downloaded into a `runtimes/implant-XXXXX` subdirectory relative to the agent's installation directory, where `XXXXX` is a unique UUID generated for each inject execution.
+Implants are downloaded into a `runtimes/implant-XXXXX` subdirectory relative to the agent's installation directory, where `XXXXX` is a unique UUID generated for each inject execution.
 
 Each implant directory is unique per inject.
 
