@@ -262,7 +262,7 @@ The garbage collector thresholds can be customized in the agent's `openaev-agent
 | `directory_max_time_minutes`   | Max age (in minutes) for `executed-*` directories before they are permanently deleted                     | `10`          |
 | `cleanup_interval_seconds`     | Interval (in seconds) between cleanup cycles                                                              | `180`         |
 
-Example configuration in `toml.config`:
+Example configuration in `openaev-agent-config.toml`:
 
 ```toml
 [cleanup]
