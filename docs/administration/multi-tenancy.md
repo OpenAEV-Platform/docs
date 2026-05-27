@@ -62,7 +62,6 @@ Tenant deletion is a **soft-delete** operation. The tenant and all its data are 
 
     After 30 days, the tenant and **all its data** (scenarios, simulations, assets, findings, documents) are permanently purged and cannot be recovered.
 
-
 ---
 
 ## Users and access in a multi-tenant setup
@@ -94,10 +93,6 @@ Map an Azure AD SAML2 provider to a specific tenant:
 ```properties
 OPENAEV_PROVIDER_AZURE_TENANT_ID=<your-tenant-uuid>
 ```
-
-!!! note "Multiple SSO providers"
-
-    Support for multiple SSO providers (each mapped to a different tenant) is planned for a future release.
 
 ---
 
