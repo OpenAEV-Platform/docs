@@ -279,7 +279,7 @@ cleanup_interval_seconds = 180
 
 OpenAEV enforces strict **segregation of duties** for agent token authentication.
 
-The agent token has a deliberately narrow scope: it is only permitted to **retrieve jobs to execute** and **send back results**. It cannot be used to perform any administrative action or access any resource outside of that execution flow.
+The agent token has a deliberately narrow scope: it is only permitted to **retrieve jobs to execute**, **retrieve documents**, and **send back results**. It cannot be used to perform any administrative action or access any resource outside of that execution flow.
 
 ---
 
