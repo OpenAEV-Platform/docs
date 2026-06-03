@@ -118,14 +118,14 @@ Each OpenCTI connection is scoped to an OpenAEV tenant, identified by its UUID (
 
 - With AWS SigV4 authentication, you can use Amazon OpenSearch or Amazon OpenSearch Serverless as an engine.
 
-| Parameter                | Environment variable     | Default value         | Description                                                                                         |
-|:-------------------------|:-------------------------|:----------------------|:----------------------------------------------------------------------------------------------------|
-| engine.engine-aws-mode   | ENGINE_ENGINE_AWS_MODE   |                       | Whether to use AWS SigV4 authentication Amazon OpenSearch/Amazon OpenSearch Serverless (es or aoss) |
-| engine.engine-selector   | ENGINE_ENGINE_SELECTOR   |                       | Engine to use for storage and search (`opensearch` for OpenSearch)                                  |
-| engine.engine-aws-host   | ENGINE_ENGINE_AWS_HOST   |                       | URL of the OpenSearch database, no http(s) prefix                                                   |
-| engine.username          | ENGINE_USERNAME          |                       | This parameter is optional. Login for the database                                                  |
-| engine.password          | ENGINE_PASSWORD          |                       | This parameter is optional. Password for the database                                               |
-| engine.engine-aws-region | ENGINE_ENGINE_AWS_REGION |                       | Example: eu-west-3                                                                                  |
+| Parameter                | Environment variable     | Default value         | Description                                                                                                |
+|:-------------------------|:-------------------------|:----------------------|:-----------------------------------------------------------------------------------------------------------|
+| engine.engine-aws-mode   | ENGINE_ENGINE_AWS_MODE   |                       | Whether to use AWS SigV4 authentication Amazon OpenSearch or Amazon OpenSearch Serverless (`es` or `aoss`) |
+| engine.engine-selector   | ENGINE_ENGINE_SELECTOR   |                       | Engine to use for storage and search (`opensearch` for OpenSearch)                                         |
+| engine.engine-aws-host   | ENGINE_ENGINE_AWS_HOST   |                       | URL of the OpenSearch database, no http(s) prefix                                                          |
+| engine.username          | ENGINE_USERNAME          |                       | This parameter is optional. Login for the database                                                         |
+| engine.password          | ENGINE_PASSWORD          |                       | This parameter is optional. Password for the database                                                      |
+| engine.engine-aws-region | ENGINE_ENGINE_AWS_REGION |                       | Example: eu-west-3                                                                                         |
 
 !!! tip "Adding the needed authorization to AWS OpenSearch"
 
