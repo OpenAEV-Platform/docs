@@ -72,6 +72,9 @@ certificates in the folder are public PEM-armoured (*.pem), DER-encoded X509 cer
 {% if "audit-log" not in (config.extra.feature_flags.disabled|string|lower|replace(" ", "")).split(",") %}
 #### Audit Logging
 
+Audit logging will allow you to have a trace of the actions performed using API calls.
+⚠️ **Important**: Please note that only modifying actions are logged (creating, updating, deleting) and not reading actions. 
+
 | Parameter                          | Environment variable               | Default value    | Description                                                                                                                                              |
 |:-----------------------------------|:-----------------------------------|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | openaev.audit-logs.transports      | OPENAEV_AUDIT-LOGS_TRANSPORTS      |                  | Lists of transports to use for audit logging separated by comma. No transports means audit logging is disabled. The transports usable are : file,console |
