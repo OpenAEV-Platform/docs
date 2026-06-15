@@ -43,7 +43,7 @@ To learn more about Xtm Composer architecture, refer to the [dedicated documenta
 ## Browsing the catalog
 - Navigate to **Integrations > Catalog**
 - Use the search bar to find collectors, injectors and executors by name or description. You can also apply filters (e.g., by collector, executor or injector type).
-- If a collector, injector or executor has already been deployed, it will no longer appear in the Catalog. Instead, you'll find it in its associated page (Collectors, Injectors, or Executors).
+- Deployed collectors, injectors, and executors can be found and updated (if needed) on their respective pages (Collectors, Injectors, and Executors).
 
 ## Deploying a collector, injector or executor
 
@@ -79,7 +79,7 @@ If you have a connector that was previously deployed manually (outside the Integ
 - An **Enterprise Edition license** is active
 - The **Integration Manager** is running
 - The user has the **Manage Platform Settings** permission
-- The connector is **external** (not built-in) and has no existing managed instance
+- The connector is **external** (not built-in)
 
 ### Migration flow
 
